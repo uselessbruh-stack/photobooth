@@ -52,6 +52,62 @@ function loadFrame(src: string) {
   return pending;
 }
 
+type PhotoWindow = { x: number; y: number; width: number; height: number };
+function findTransparentWindows(artwork: HTMLImageElement, expected: number): PhotoWindow[] {
+  const canvas = document.createElement("canvas");
+  canvas.width = artwork.naturalWidth; canvas.height = artwork.naturalHeight;
+  const ctx = canvas.getContext("2d", { willReadFrequently: true });
+  if (!ctx) return [];
+  ctx.drawImage(artwork, 0, 0);
+  const pixels = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+  const minRun = Math.min(canvas.width, canvas.height) * .12;
+  const yStep = Math.max(1, Math.floor(canvas.height / 1800));
+  const runs = new Map<string, { x: number; width: number; ys: number[] }>();
+  for (let y = 0; y < canvas.height; y += yStep) {
+    let start = -1;
+    for (let x = 0; x <= canvas.width; x++) {
+      const clear = x < canvas.width && pixels[(y * canvas.width + x) * 4 + 3] < 8;
+      if (clear && start < 0) start = x;
+      if ((!clear || x === canvas.width) && start >= 0) {
+        const width = x - start;
+        if (width >= minRun) {
+          const key = `${start}:${x}`;
+          const run = runs.get(key) ?? { x: start, width, ys: [] };
+          run.ys.push(y); runs.set(key, run);
+        }
+        start = -1;
+      }
+    }
+  }
+  const candidates: PhotoWindow[] = [];
+  const minHeight = Math.min(canvas.width, canvas.height) * .1;
+  for (const run of runs.values()) {
+    let start = run.ys[0], previous = start;
+    const add = (end: number) => {
+      if (end - start >= minHeight) candidates.push({ x: run.x, y: start, width: run.width, height: end - start });
+    };
+    for (let i = 1; i < run.ys.length; i++) {
+      const current = run.ys[i];
+      if (current - previous > yStep * 2) { add(previous + yStep); start = current; }
+      previous = current;
+    }
+    add(previous + yStep);
+  }
+  return candidates
+    .sort((a, b) => b.width * b.height - a.width * a.height)
+    .slice(0, expected)
+    .sort((a, b) => a.y - b.y || a.x - b.x);
+}
+
+function drawPhotoInWindow(ctx: CanvasRenderingContext2D, image: HTMLImageElement, window: PhotoWindow) {
+  const sourceRatio = image.naturalWidth / image.naturalHeight;
+  const targetRatio = window.width / window.height;
+  let sx = 0, sy = 0, sw = image.naturalWidth, sh = image.naturalHeight;
+  if (sourceRatio > targetRatio) { sw = image.naturalHeight * targetRatio; sx = (image.naturalWidth - sw) / 2; }
+  else { sh = image.naturalWidth / targetRatio; sy = (image.naturalHeight - sh) / 2; }
+  ctx.drawImage(image, sx, sy, sw, sh, window.x, window.y, window.width, window.height);
+}
+
 // Preview and export share these exact square cells. Future image-frame assets
 // can use these same bounds without changing photo geometry.
 export function printGeometry(options: PrintOptions) {
@@ -215,15 +271,29 @@ export async function renderPrint(items: string[], options: PrintOptions, previe
   const scale = previewMaxEdge ? Math.min(1, previewMaxEdge / Math.max(s.w, s.h)) : 1;
   c.width = Math.round(s.w * scale); c.height = Math.round(s.h * scale);
   const ctx = c.getContext("2d")!, g = printGeometry(options);
+  const frameMode = normalizeNote(options.caption) ? "with-note" : "no-note";
+  const frameArtwork = options.paper.assetId && !options.branding && !options.date
+    ? await loadFrame(`/frames/${options.paper.assetId}/${s.id}-${frameMode}.png`)
+    : null;
+  const filmWindows = options.paper.assetId === "35mm-film" && frameArtwork
+    ? findTransparentWindows(frameArtwork, s.count)
+    : [];
+  if (options.paper.assetId === "35mm-film" && frameArtwork && filmWindows.length !== s.count) {
+    throw new Error("Could not line up the 35mm photo windows for this layout.");
+  }
   ctx.scale(scale, scale);
-  if (!options.paper.transparentPerforations) {
+  if (!options.paper.transparentPerforations || !frameArtwork) {
     ctx.fillStyle = options.paper.color; ctx.fillRect(0, 0, s.w, s.h);
   }
   for (let i = 0; i < s.count; i++) {
     const img = new Image(); img.src = items[i]; await img.decode();
-    const edge = Math.min(img.width, img.height);
+    const filmWindow = filmWindows[i];
     const x = g.x + (i % s.cols) * (g.cell + g.gap), y = g.y + Math.floor(i / s.cols) * (g.cell + g.gap);
-    ctx.drawImage(img, (img.width - edge) / 2, (img.height - edge) / 2, edge, edge, x, y, g.cell, g.cell);
+    if (filmWindow) drawPhotoInWindow(ctx, img, filmWindow);
+    else {
+      const edge = Math.min(img.width, img.height);
+      ctx.drawImage(img, (img.width - edge) / 2, (img.height - edge) / 2, edge, edge, x, y, g.cell, g.cell);
+    }
     if (options.frame === "corners") {
       ctx.fillStyle = options.paper.ink;
       const t = g.cell * .08;
@@ -232,11 +302,9 @@ export async function renderPrint(items: string[], options: PrintOptions, previe
       }
     }
   }
-  if (options.paper.assetId && !options.branding && !options.date) {
-    const mode = normalizeNote(options.caption) ? "with-note" : "no-note";
-    const artwork = await loadFrame(`/frames/${options.paper.assetId}/${s.id}-${mode}.png`);
-    if (artwork.naturalWidth !== s.w || artwork.naturalHeight !== s.h) throw new Error("Frame artwork dimensions do not match this layout.");
-    ctx.drawImage(artwork, 0, 0, s.w, s.h);
+  if (frameArtwork) {
+    if (frameArtwork.naturalWidth !== s.w || frameArtwork.naturalHeight !== s.h) throw new Error("Frame artwork dimensions do not match this layout.");
+    ctx.drawImage(frameArtwork, 0, 0, s.w, s.h);
   } else {
     decorate(ctx, options, g);
   }
