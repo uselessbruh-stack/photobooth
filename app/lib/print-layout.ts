@@ -132,6 +132,34 @@ function decorate(ctx: CanvasRenderingContext2D, o: PrintOptions, g: ReturnType<
   ctx.globalAlpha = 1;
 }
 
+function decorateTheme(ctx: CanvasRenderingContext2D, options: PrintOptions, geometry: ReturnType<typeof printGeometry>) {
+  if (options.paper.assetId !== "baby-pink-hearts" || options.format.cols !== 1) return;
+  const { format } = options;
+  const size = Math.max(24, geometry.unit * .03);
+  const sideX = Math.max(size * .72, geometry.x * .48);
+  const drawHeart = (x: number, y: number, scale: number, rotation: number, color: string) => {
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.rotate(rotation);
+    ctx.scale(scale / 2, scale / 2);
+    ctx.beginPath();
+    ctx.moveTo(0, .78);
+    ctx.bezierCurveTo(-.16, .61, -1, .04, -1, -.43);
+    ctx.bezierCurveTo(-1, -1.02, -.22, -1.06, 0, -.48);
+    ctx.bezierCurveTo(.22, -1.06, 1, -1.02, 1, -.43);
+    ctx.bezierCurveTo(1, .04, .16, .61, 0, .78);
+    ctx.closePath();
+    ctx.fillStyle = color;
+    ctx.fill();
+    ctx.restore();
+  };
+  for (let row = 0; row < format.rows; row++) {
+    const centerY = geometry.y + row * (geometry.cell + geometry.gap) + geometry.cell * .5;
+    drawHeart(sideX, centerY, size, -.12, "#ad405d");
+    drawHeart(format.w - sideX, centerY, size * .82, .11, "#cc6577");
+  }
+}
+
 export async function renderPrint(items: string[], options: PrintOptions, previewMaxEdge?: number) {
   await document.fonts.load("18px SketchHand");
   const c = document.createElement("canvas"), s = options.format;
@@ -163,6 +191,7 @@ export async function renderPrint(items: string[], options: PrintOptions, previe
   } else {
     decorate(ctx, options, g);
   }
+  decorateTheme(ctx, options, g);
   const lines: string[] = [];
   if (options.branding) lines.push("little moments");
   if (normalizeNote(options.caption)) lines.push(normalizeNote(options.caption));

@@ -113,3 +113,8 @@ header{border-width:0 0 1px}footer{border-width:1px 0 0}
 .manual-capture-button,.upload-capture-button{min-width:260px}
 @media(max-width:760px){.wall-capture{left:12%;top:56%;width:35%;padding:10px 8px 8px}.wall-capture legend{font-size:18px;margin-bottom:4px}.wall-capture-options{gap:2px}.wall-capture-options>button{min-height:30px;padding:3px 5px;gap:5px;font-size:13px}.wall-capture-options>button>span:first-child{width:18px;height:18px;font-size:14px}.wall-capture-options small{display:none}.capture-controls>.primary{min-width:0}}
 @media(max-width:380px){.wall-capture{left:10%;width:38%;top:56.5%;padding:9px 6px 7px}.wall-capture legend{font-size:16px}.wall-capture-options>button{min-height:28px;gap:4px;padding:2px 4px;font-size:12px}.wall-capture-options>button>span:first-child{width:16px;height:16px;font-size:12px}}
+
+/* Keep photo mode clear of the note field and align it beside the lower controls. */
+.wall-capture{left:14%;width:18%}
+@media(max-width:760px){.wall-capture{left:12%;top:68%;width:35%;padding:8px 7px 7px}.wall-capture legend{font-size:17px;margin-bottom:3px}.wall-capture-options{gap:1px}.wall-capture-options>button{min-height:25px;padding:2px 4px;gap:4px;font-size:12px}.wall-capture-options>button>span:first-child{width:16px;height:16px;font-size:12px}}
+@media(max-width:380px){.wall-capture{left:10%;top:68%;width:38%;padding:7px 5px 6px}.wall-capture legend{font-size:15px}.wall-capture-options>button{min-height:23px;font-size:11px}}
