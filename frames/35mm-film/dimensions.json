@@ -1,0 +1,3414 @@
+{
+  "name": "35mm film",
+  "assetId": "35mm-film",
+  "color": "#211e1d",
+  "ink": "#edc573",
+  "assetMode": "pattern",
+  "transparentPerforations": true,
+  "variants": [
+    {
+      "layout": "strip-three",
+      "mode": "no-note",
+      "file": "35mm-film/strip-three-no-note.png",
+      "src": "/frames/35mm-film/strip-three-no-note.png",
+      "width": 1200,
+      "height": 3600,
+      "cutouts": [
+        {
+          "x": 174,
+          "y": 474,
+          "width": 852,
+          "height": 852
+        },
+        {
+          "x": 174,
+          "y": 1374,
+          "width": 852,
+          "height": 852
+        },
+        {
+          "x": 174,
+          "y": 2274,
+          "width": 852,
+          "height": 852
+        }
+      ],
+      "perforations": [
+        {
+          "x": 18,
+          "y": 18,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 18,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 177,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 177,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 336,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 336,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 495,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 495,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 654,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 654,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 813,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 813,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 972,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 972,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1131,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1131,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1290,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1290,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1449,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1449,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1608,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1608,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1767,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1767,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1926,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1926,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2085,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2085,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2244,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2244,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2403,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2403,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2562,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2562,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2721,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2721,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2880,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2880,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 3039,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 3039,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 3198,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 3198,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 3357,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 3357,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 3516,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 3516,
+          "width": 102,
+          "height": 66
+        }
+      ],
+      "noteArea": null
+    },
+    {
+      "layout": "strip-three",
+      "mode": "with-note",
+      "file": "35mm-film/strip-three-with-note.png",
+      "src": "/frames/35mm-film/strip-three-with-note.png",
+      "width": 1200,
+      "height": 3600,
+      "cutouts": [
+        {
+          "x": 174,
+          "y": 398,
+          "width": 852,
+          "height": 852
+        },
+        {
+          "x": 174,
+          "y": 1298,
+          "width": 852,
+          "height": 852
+        },
+        {
+          "x": 174,
+          "y": 2198,
+          "width": 852,
+          "height": 852
+        }
+      ],
+      "perforations": [
+        {
+          "x": 18,
+          "y": 18,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 18,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 177,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 177,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 336,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 336,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 495,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 495,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 654,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 654,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 813,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 813,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 972,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 972,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1131,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1131,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1290,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1290,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1449,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1449,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1608,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1608,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1767,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1767,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1926,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1926,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2085,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2085,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2244,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2244,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2403,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2403,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2562,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2562,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2721,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2721,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2880,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2880,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 3039,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 3039,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 3198,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 3198,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 3357,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 3357,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 3516,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 3516,
+          "width": 102,
+          "height": 66
+        }
+      ],
+      "noteArea": {
+        "x": 174,
+        "y": 3453,
+        "width": 852,
+        "height": 142
+      }
+    },
+    {
+      "layout": "strip-two",
+      "mode": "no-note",
+      "file": "35mm-film/strip-two-no-note.png",
+      "src": "/frames/35mm-film/strip-two-no-note.png",
+      "width": 1200,
+      "height": 2400,
+      "cutouts": [
+        {
+          "x": 174,
+          "y": 324,
+          "width": 852,
+          "height": 852
+        },
+        {
+          "x": 174,
+          "y": 1224,
+          "width": 852,
+          "height": 852
+        }
+      ],
+      "perforations": [
+        {
+          "x": 18,
+          "y": 18,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 18,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 171,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 171,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 324,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 324,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 478,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 478,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 631,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 631,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 784,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 784,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 937,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 937,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1090,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1090,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1244,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1244,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1397,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1397,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1550,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1550,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1703,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1703,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1856,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1856,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2010,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2010,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2163,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2163,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2316,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2316,
+          "width": 102,
+          "height": 66
+        }
+      ],
+      "noteArea": null
+    },
+    {
+      "layout": "strip-two",
+      "mode": "with-note",
+      "file": "35mm-film/strip-two-with-note.png",
+      "src": "/frames/35mm-film/strip-two-with-note.png",
+      "width": 1200,
+      "height": 2400,
+      "cutouts": [
+        {
+          "x": 174,
+          "y": 248,
+          "width": 852,
+          "height": 852
+        },
+        {
+          "x": 174,
+          "y": 1148,
+          "width": 852,
+          "height": 852
+        }
+      ],
+      "perforations": [
+        {
+          "x": 18,
+          "y": 18,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 18,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 171,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 171,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 324,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 324,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 478,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 478,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 631,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 631,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 784,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 784,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 937,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 937,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1090,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1090,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1244,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1244,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1397,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1397,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1550,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1550,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1703,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1703,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1856,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1856,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2010,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2010,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2163,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2163,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2316,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2316,
+          "width": 102,
+          "height": 66
+        }
+      ],
+      "noteArea": {
+        "x": 174,
+        "y": 2253,
+        "width": 852,
+        "height": 142
+      }
+    },
+    {
+      "layout": "strip-four",
+      "mode": "no-note",
+      "file": "35mm-film/strip-four-no-note.png",
+      "src": "/frames/35mm-film/strip-four-no-note.png",
+      "width": 1200,
+      "height": 4800,
+      "cutouts": [
+        {
+          "x": 174,
+          "y": 624,
+          "width": 852,
+          "height": 852
+        },
+        {
+          "x": 174,
+          "y": 1524,
+          "width": 852,
+          "height": 852
+        },
+        {
+          "x": 174,
+          "y": 2424,
+          "width": 852,
+          "height": 852
+        },
+        {
+          "x": 174,
+          "y": 3324,
+          "width": 852,
+          "height": 852
+        }
+      ],
+      "perforations": [
+        {
+          "x": 18,
+          "y": 18,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 18,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 175,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 175,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 331,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 331,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 488,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 488,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 644,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 644,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 801,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 801,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 958,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 958,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1114,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1114,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1271,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1271,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1427,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1427,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1584,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1584,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1741,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1741,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1897,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1897,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2054,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2054,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2210,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2210,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2367,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2367,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2524,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2524,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2680,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2680,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2837,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2837,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2993,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2993,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 3150,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 3150,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 3307,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 3307,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 3463,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 3463,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 3620,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 3620,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 3776,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 3776,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 3933,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 3933,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 4090,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 4090,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 4246,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 4246,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 4403,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 4403,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 4559,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 4559,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 4716,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 4716,
+          "width": 102,
+          "height": 66
+        }
+      ],
+      "noteArea": null
+    },
+    {
+      "layout": "strip-four",
+      "mode": "with-note",
+      "file": "35mm-film/strip-four-with-note.png",
+      "src": "/frames/35mm-film/strip-four-with-note.png",
+      "width": 1200,
+      "height": 4800,
+      "cutouts": [
+        {
+          "x": 174,
+          "y": 548,
+          "width": 852,
+          "height": 852
+        },
+        {
+          "x": 174,
+          "y": 1448,
+          "width": 852,
+          "height": 852
+        },
+        {
+          "x": 174,
+          "y": 2348,
+          "width": 852,
+          "height": 852
+        },
+        {
+          "x": 174,
+          "y": 3248,
+          "width": 852,
+          "height": 852
+        }
+      ],
+      "perforations": [
+        {
+          "x": 18,
+          "y": 18,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 18,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 175,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 175,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 331,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 331,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 488,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 488,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 644,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 644,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 801,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 801,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 958,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 958,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1114,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1114,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1271,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1271,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1427,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1427,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1584,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1584,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1741,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1741,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 1897,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 1897,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2054,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2054,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2210,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2210,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2367,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2367,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2524,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2524,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2680,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2680,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2837,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2837,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 2993,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 2993,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 3150,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 3150,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 3307,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 3307,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 3463,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 3463,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 3620,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 3620,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 3776,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 3776,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 3933,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 3933,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 4090,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 4090,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 4246,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 4246,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 4403,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 4403,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 4559,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 4559,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 18,
+          "y": 4716,
+          "width": 102,
+          "height": 66
+        },
+        {
+          "x": 1080,
+          "y": 4716,
+          "width": 102,
+          "height": 66
+        }
+      ],
+      "noteArea": {
+        "x": 174,
+        "y": 4653,
+        "width": 852,
+        "height": 142
+      }
+    },
+    {
+      "layout": "square-single",
+      "mode": "no-note",
+      "file": "35mm-film/square-single-no-note.png",
+      "src": "/frames/35mm-film/square-single-no-note.png",
+      "width": 1800,
+      "height": 1800,
+      "cutouts": [
+        {
+          "x": 261,
+          "y": 261,
+          "width": 1278,
+          "height": 1278
+        }
+      ],
+      "perforations": [
+        {
+          "x": 27,
+          "y": 27,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 27,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 262,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 262,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 498,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 498,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 733,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 733,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 968,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 968,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 1203,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 1203,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 1439,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 1439,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 1674,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 1674,
+          "width": 153,
+          "height": 99
+        }
+      ],
+      "noteArea": null
+    },
+    {
+      "layout": "square-single",
+      "mode": "with-note",
+      "file": "35mm-film/square-single-with-note.png",
+      "src": "/frames/35mm-film/square-single-with-note.png",
+      "width": 1800,
+      "height": 1800,
+      "cutouts": [
+        {
+          "x": 261,
+          "y": 147,
+          "width": 1278,
+          "height": 1278
+        }
+      ],
+      "perforations": [
+        {
+          "x": 27,
+          "y": 27,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 27,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 262,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 262,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 498,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 498,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 733,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 733,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 968,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 968,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 1203,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 1203,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 1439,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 1439,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 1674,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 1674,
+          "width": 153,
+          "height": 99
+        }
+      ],
+      "noteArea": {
+        "x": 261,
+        "y": 1579,
+        "width": 1278,
+        "height": 214
+      }
+    },
+    {
+      "layout": "square-four",
+      "mode": "no-note",
+      "file": "35mm-film/square-four-no-note.png",
+      "src": "/frames/35mm-film/square-four-no-note.png",
+      "width": 2400,
+      "height": 2400,
+      "cutouts": [
+        {
+          "x": 348,
+          "y": 348,
+          "width": 804,
+          "height": 804
+        },
+        {
+          "x": 1248,
+          "y": 348,
+          "width": 804,
+          "height": 804
+        },
+        {
+          "x": 348,
+          "y": 1248,
+          "width": 804,
+          "height": 804
+        },
+        {
+          "x": 1248,
+          "y": 1248,
+          "width": 804,
+          "height": 804
+        }
+      ],
+      "perforations": [
+        {
+          "x": 36,
+          "y": 36,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 2160,
+          "y": 36,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 36,
+          "y": 350,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 2160,
+          "y": 350,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 36,
+          "y": 663,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 2160,
+          "y": 663,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 36,
+          "y": 977,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 2160,
+          "y": 977,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 36,
+          "y": 1291,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 2160,
+          "y": 1291,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 36,
+          "y": 1605,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 2160,
+          "y": 1605,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 36,
+          "y": 1918,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 2160,
+          "y": 1918,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 36,
+          "y": 2232,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 2160,
+          "y": 2232,
+          "width": 204,
+          "height": 132
+        }
+      ],
+      "noteArea": null
+    },
+    {
+      "layout": "square-four",
+      "mode": "with-note",
+      "file": "35mm-film/square-four-with-note.png",
+      "src": "/frames/35mm-film/square-four-with-note.png",
+      "width": 2400,
+      "height": 2400,
+      "cutouts": [
+        {
+          "x": 348,
+          "y": 196,
+          "width": 804,
+          "height": 804
+        },
+        {
+          "x": 1248,
+          "y": 196,
+          "width": 804,
+          "height": 804
+        },
+        {
+          "x": 348,
+          "y": 1096,
+          "width": 804,
+          "height": 804
+        },
+        {
+          "x": 1248,
+          "y": 1096,
+          "width": 804,
+          "height": 804
+        }
+      ],
+      "perforations": [
+        {
+          "x": 36,
+          "y": 36,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 2160,
+          "y": 36,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 36,
+          "y": 350,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 2160,
+          "y": 350,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 36,
+          "y": 663,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 2160,
+          "y": 663,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 36,
+          "y": 977,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 2160,
+          "y": 977,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 36,
+          "y": 1291,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 2160,
+          "y": 1291,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 36,
+          "y": 1605,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 2160,
+          "y": 1605,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 36,
+          "y": 1918,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 2160,
+          "y": 1918,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 36,
+          "y": 2232,
+          "width": 204,
+          "height": 132
+        },
+        {
+          "x": 2160,
+          "y": 2232,
+          "width": 204,
+          "height": 132
+        }
+      ],
+      "noteArea": {
+        "x": 348,
+        "y": 2106,
+        "width": 1704,
+        "height": 284
+      }
+    },
+    {
+      "layout": "square-nine",
+      "mode": "no-note",
+      "file": "35mm-film/square-nine-no-note.png",
+      "src": "/frames/35mm-film/square-nine-no-note.png",
+      "width": 3000,
+      "height": 3000,
+      "cutouts": [
+        {
+          "x": 435,
+          "y": 435,
+          "width": 630,
+          "height": 630
+        },
+        {
+          "x": 1185,
+          "y": 435,
+          "width": 630,
+          "height": 630
+        },
+        {
+          "x": 1935,
+          "y": 435,
+          "width": 630,
+          "height": 630
+        },
+        {
+          "x": 435,
+          "y": 1185,
+          "width": 630,
+          "height": 630
+        },
+        {
+          "x": 1185,
+          "y": 1185,
+          "width": 630,
+          "height": 630
+        },
+        {
+          "x": 1935,
+          "y": 1185,
+          "width": 630,
+          "height": 630
+        },
+        {
+          "x": 435,
+          "y": 1935,
+          "width": 630,
+          "height": 630
+        },
+        {
+          "x": 1185,
+          "y": 1935,
+          "width": 630,
+          "height": 630
+        },
+        {
+          "x": 1935,
+          "y": 1935,
+          "width": 630,
+          "height": 630
+        }
+      ],
+      "perforations": [
+        {
+          "x": 45,
+          "y": 45,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 2700,
+          "y": 45,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 45,
+          "y": 437,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 2700,
+          "y": 437,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 45,
+          "y": 829,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 2700,
+          "y": 829,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 45,
+          "y": 1221,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 2700,
+          "y": 1221,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 45,
+          "y": 1614,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 2700,
+          "y": 1614,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 45,
+          "y": 2006,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 2700,
+          "y": 2006,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 45,
+          "y": 2398,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 2700,
+          "y": 2398,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 45,
+          "y": 2790,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 2700,
+          "y": 2790,
+          "width": 255,
+          "height": 165
+        }
+      ],
+      "noteArea": null
+    },
+    {
+      "layout": "square-nine",
+      "mode": "with-note",
+      "file": "35mm-film/square-nine-with-note.png",
+      "src": "/frames/35mm-film/square-nine-with-note.png",
+      "width": 3000,
+      "height": 3000,
+      "cutouts": [
+        {
+          "x": 435,
+          "y": 245,
+          "width": 630,
+          "height": 630
+        },
+        {
+          "x": 1185,
+          "y": 245,
+          "width": 630,
+          "height": 630
+        },
+        {
+          "x": 1935,
+          "y": 245,
+          "width": 630,
+          "height": 630
+        },
+        {
+          "x": 435,
+          "y": 995,
+          "width": 630,
+          "height": 630
+        },
+        {
+          "x": 1185,
+          "y": 995,
+          "width": 630,
+          "height": 630
+        },
+        {
+          "x": 1935,
+          "y": 995,
+          "width": 630,
+          "height": 630
+        },
+        {
+          "x": 435,
+          "y": 1745,
+          "width": 630,
+          "height": 630
+        },
+        {
+          "x": 1185,
+          "y": 1745,
+          "width": 630,
+          "height": 630
+        },
+        {
+          "x": 1935,
+          "y": 1745,
+          "width": 630,
+          "height": 630
+        }
+      ],
+      "perforations": [
+        {
+          "x": 45,
+          "y": 45,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 2700,
+          "y": 45,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 45,
+          "y": 437,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 2700,
+          "y": 437,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 45,
+          "y": 829,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 2700,
+          "y": 829,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 45,
+          "y": 1221,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 2700,
+          "y": 1221,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 45,
+          "y": 1614,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 2700,
+          "y": 1614,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 45,
+          "y": 2006,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 2700,
+          "y": 2006,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 45,
+          "y": 2398,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 2700,
+          "y": 2398,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 45,
+          "y": 2790,
+          "width": 255,
+          "height": 165
+        },
+        {
+          "x": 2700,
+          "y": 2790,
+          "width": 255,
+          "height": 165
+        }
+      ],
+      "noteArea": {
+        "x": 435,
+        "y": 2633,
+        "width": 2130,
+        "height": 355
+      }
+    },
+    {
+      "layout": "portrait-six",
+      "mode": "no-note",
+      "file": "35mm-film/portrait-six-no-note.png",
+      "src": "/frames/35mm-film/portrait-six-no-note.png",
+      "width": 1800,
+      "height": 2700,
+      "cutouts": [
+        {
+          "x": 261,
+          "y": 373,
+          "width": 603,
+          "height": 603
+        },
+        {
+          "x": 936,
+          "y": 373,
+          "width": 603,
+          "height": 603
+        },
+        {
+          "x": 261,
+          "y": 1048,
+          "width": 603,
+          "height": 603
+        },
+        {
+          "x": 936,
+          "y": 1048,
+          "width": 603,
+          "height": 603
+        },
+        {
+          "x": 261,
+          "y": 1723,
+          "width": 603,
+          "height": 603
+        },
+        {
+          "x": 936,
+          "y": 1723,
+          "width": 603,
+          "height": 603
+        }
+      ],
+      "perforations": [
+        {
+          "x": 27,
+          "y": 27,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 27,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 259,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 259,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 490,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 490,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 722,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 722,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 953,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 953,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 1185,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 1185,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 1416,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 1416,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 1648,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 1648,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 1879,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 1879,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 2111,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 2111,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 2342,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 2342,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 2574,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 2574,
+          "width": 153,
+          "height": 99
+        }
+      ],
+      "noteArea": null
+    },
+    {
+      "layout": "portrait-six",
+      "mode": "with-note",
+      "file": "35mm-film/portrait-six-with-note.png",
+      "src": "/frames/35mm-film/portrait-six-with-note.png",
+      "width": 1800,
+      "height": 2700,
+      "cutouts": [
+        {
+          "x": 261,
+          "y": 259,
+          "width": 603,
+          "height": 603
+        },
+        {
+          "x": 936,
+          "y": 259,
+          "width": 603,
+          "height": 603
+        },
+        {
+          "x": 261,
+          "y": 934,
+          "width": 603,
+          "height": 603
+        },
+        {
+          "x": 936,
+          "y": 934,
+          "width": 603,
+          "height": 603
+        },
+        {
+          "x": 261,
+          "y": 1609,
+          "width": 603,
+          "height": 603
+        },
+        {
+          "x": 936,
+          "y": 1609,
+          "width": 603,
+          "height": 603
+        }
+      ],
+      "perforations": [
+        {
+          "x": 27,
+          "y": 27,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 27,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 259,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 259,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 490,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 490,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 722,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 722,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 953,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 953,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 1185,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 1185,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 1416,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 1416,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 1648,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 1648,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 1879,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 1879,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 2111,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 2111,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 2342,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 2342,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 2574,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 1620,
+          "y": 2574,
+          "width": 153,
+          "height": 99
+        }
+      ],
+      "noteArea": {
+        "x": 261,
+        "y": 2479,
+        "width": 1278,
+        "height": 214
+      }
+    },
+    {
+      "layout": "landscape-six",
+      "mode": "no-note",
+      "file": "35mm-film/landscape-six-no-note.png",
+      "src": "/frames/35mm-film/landscape-six-no-note.png",
+      "width": 2700,
+      "height": 1800,
+      "cutouts": [
+        {
+          "x": 261,
+          "y": 186,
+          "width": 678,
+          "height": 678
+        },
+        {
+          "x": 1011,
+          "y": 186,
+          "width": 678,
+          "height": 678
+        },
+        {
+          "x": 1761,
+          "y": 186,
+          "width": 678,
+          "height": 678
+        },
+        {
+          "x": 261,
+          "y": 936,
+          "width": 678,
+          "height": 678
+        },
+        {
+          "x": 1011,
+          "y": 936,
+          "width": 678,
+          "height": 678
+        },
+        {
+          "x": 1761,
+          "y": 936,
+          "width": 678,
+          "height": 678
+        }
+      ],
+      "perforations": [
+        {
+          "x": 27,
+          "y": 27,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 2520,
+          "y": 27,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 262,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 2520,
+          "y": 262,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 498,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 2520,
+          "y": 498,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 733,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 2520,
+          "y": 733,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 968,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 2520,
+          "y": 968,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 1203,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 2520,
+          "y": 1203,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 1439,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 2520,
+          "y": 1439,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 1674,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 2520,
+          "y": 1674,
+          "width": 153,
+          "height": 99
+        }
+      ],
+      "noteArea": null
+    },
+    {
+      "layout": "landscape-six",
+      "mode": "with-note",
+      "file": "35mm-film/landscape-six-with-note.png",
+      "src": "/frames/35mm-film/landscape-six-with-note.png",
+      "width": 2700,
+      "height": 1800,
+      "cutouts": [
+        {
+          "x": 355,
+          "y": 135,
+          "width": 615,
+          "height": 615
+        },
+        {
+          "x": 1042,
+          "y": 135,
+          "width": 615,
+          "height": 615
+        },
+        {
+          "x": 1729,
+          "y": 135,
+          "width": 615,
+          "height": 615
+        },
+        {
+          "x": 355,
+          "y": 822,
+          "width": 615,
+          "height": 615
+        },
+        {
+          "x": 1042,
+          "y": 822,
+          "width": 615,
+          "height": 615
+        },
+        {
+          "x": 1729,
+          "y": 822,
+          "width": 615,
+          "height": 615
+        }
+      ],
+      "perforations": [
+        {
+          "x": 27,
+          "y": 27,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 2520,
+          "y": 27,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 262,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 2520,
+          "y": 262,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 498,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 2520,
+          "y": 498,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 733,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 2520,
+          "y": 733,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 968,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 2520,
+          "y": 968,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 1203,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 2520,
+          "y": 1203,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 1439,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 2520,
+          "y": 1439,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 27,
+          "y": 1674,
+          "width": 153,
+          "height": 99
+        },
+        {
+          "x": 2520,
+          "y": 1674,
+          "width": 153,
+          "height": 99
+        }
+      ],
+      "noteArea": {
+        "x": 261,
+        "y": 1579,
+        "width": 2178,
+        "height": 214
+      }
+    }
+  ]
+}

@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.npm-cache/
+
+# Local export bundles are reproducible from frames/ and public/frames/.
+/design/*.zip
+/design/black-individual/
+/design/black-white-exact-frames/

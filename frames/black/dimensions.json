@@ -1,0 +1,644 @@
+{
+  "name": "Black",
+  "assetId": "black",
+  "color": "#000000",
+  "ink": "#ffffff",
+  "variants": [
+    {
+      "layout": "strip-three",
+      "mode": "no-note",
+      "file": "black/strip-three-no-note.png",
+      "src": "/frames/black/strip-three-no-note.png",
+      "width": 1200,
+      "height": 3600,
+      "cutouts": [
+        {
+          "x": 90,
+          "y": 222,
+          "width": 1020,
+          "height": 1020
+        },
+        {
+          "x": 90,
+          "y": 1290,
+          "width": 1020,
+          "height": 1020
+        },
+        {
+          "x": 90,
+          "y": 2358,
+          "width": 1020,
+          "height": 1020
+        }
+      ],
+      "noteArea": null
+    },
+    {
+      "layout": "strip-three",
+      "mode": "with-note",
+      "file": "black/strip-three-with-note.png",
+      "src": "/frames/black/strip-three-with-note.png",
+      "width": 1200,
+      "height": 3600,
+      "cutouts": [
+        {
+          "x": 90,
+          "y": 146,
+          "width": 1020,
+          "height": 1020
+        },
+        {
+          "x": 90,
+          "y": 1214,
+          "width": 1020,
+          "height": 1020
+        },
+        {
+          "x": 90,
+          "y": 2282,
+          "width": 1020,
+          "height": 1020
+        }
+      ],
+      "noteArea": {
+        "x": 0,
+        "y": 3448,
+        "width": 1200,
+        "height": 152
+      }
+    },
+    {
+      "layout": "strip-two",
+      "mode": "no-note",
+      "file": "black/strip-two-no-note.png",
+      "src": "/frames/black/strip-two-no-note.png",
+      "width": 1200,
+      "height": 2400,
+      "cutouts": [
+        {
+          "x": 90,
+          "y": 156,
+          "width": 1020,
+          "height": 1020
+        },
+        {
+          "x": 90,
+          "y": 1224,
+          "width": 1020,
+          "height": 1020
+        }
+      ],
+      "noteArea": null
+    },
+    {
+      "layout": "strip-two",
+      "mode": "with-note",
+      "file": "black/strip-two-with-note.png",
+      "src": "/frames/black/strip-two-with-note.png",
+      "width": 1200,
+      "height": 2400,
+      "cutouts": [
+        {
+          "x": 95,
+          "y": 90,
+          "width": 1010,
+          "height": 1010
+        },
+        {
+          "x": 95,
+          "y": 1148,
+          "width": 1010,
+          "height": 1010
+        }
+      ],
+      "noteArea": {
+        "x": 0,
+        "y": 2248,
+        "width": 1200,
+        "height": 152
+      }
+    },
+    {
+      "layout": "strip-four",
+      "mode": "no-note",
+      "file": "black/strip-four-no-note.png",
+      "src": "/frames/black/strip-four-no-note.png",
+      "width": 1200,
+      "height": 4800,
+      "cutouts": [
+        {
+          "x": 90,
+          "y": 288,
+          "width": 1020,
+          "height": 1020
+        },
+        {
+          "x": 90,
+          "y": 1356,
+          "width": 1020,
+          "height": 1020
+        },
+        {
+          "x": 90,
+          "y": 2424,
+          "width": 1020,
+          "height": 1020
+        },
+        {
+          "x": 90,
+          "y": 3492,
+          "width": 1020,
+          "height": 1020
+        }
+      ],
+      "noteArea": null
+    },
+    {
+      "layout": "strip-four",
+      "mode": "with-note",
+      "file": "black/strip-four-with-note.png",
+      "src": "/frames/black/strip-four-with-note.png",
+      "width": 1200,
+      "height": 4800,
+      "cutouts": [
+        {
+          "x": 90,
+          "y": 212,
+          "width": 1020,
+          "height": 1020
+        },
+        {
+          "x": 90,
+          "y": 1280,
+          "width": 1020,
+          "height": 1020
+        },
+        {
+          "x": 90,
+          "y": 2348,
+          "width": 1020,
+          "height": 1020
+        },
+        {
+          "x": 90,
+          "y": 3416,
+          "width": 1020,
+          "height": 1020
+        }
+      ],
+      "noteArea": {
+        "x": 0,
+        "y": 4648,
+        "width": 1200,
+        "height": 152
+      }
+    },
+    {
+      "layout": "square-single",
+      "mode": "no-note",
+      "file": "black/square-single-no-note.png",
+      "src": "/frames/black/square-single-no-note.png",
+      "width": 1800,
+      "height": 1800,
+      "cutouts": [
+        {
+          "x": 135,
+          "y": 135,
+          "width": 1530,
+          "height": 1530
+        }
+      ],
+      "noteArea": null
+    },
+    {
+      "layout": "square-single",
+      "mode": "with-note",
+      "file": "black/square-single-with-note.png",
+      "src": "/frames/black/square-single-with-note.png",
+      "width": 1800,
+      "height": 1800,
+      "cutouts": [
+        {
+          "x": 249,
+          "y": 135,
+          "width": 1302,
+          "height": 1302
+        }
+      ],
+      "noteArea": {
+        "x": 0,
+        "y": 1572,
+        "width": 1800,
+        "height": 228
+      }
+    },
+    {
+      "layout": "square-four",
+      "mode": "no-note",
+      "file": "black/square-four-no-note.png",
+      "src": "/frames/black/square-four-no-note.png",
+      "width": 2400,
+      "height": 2400,
+      "cutouts": [
+        {
+          "x": 180,
+          "y": 180,
+          "width": 972,
+          "height": 972
+        },
+        {
+          "x": 1248,
+          "y": 180,
+          "width": 972,
+          "height": 972
+        },
+        {
+          "x": 180,
+          "y": 1248,
+          "width": 972,
+          "height": 972
+        },
+        {
+          "x": 1248,
+          "y": 1248,
+          "width": 972,
+          "height": 972
+        }
+      ],
+      "noteArea": null
+    },
+    {
+      "layout": "square-four",
+      "mode": "with-note",
+      "file": "black/square-four-with-note.png",
+      "src": "/frames/black/square-four-with-note.png",
+      "width": 2400,
+      "height": 2400,
+      "cutouts": [
+        {
+          "x": 332,
+          "y": 180,
+          "width": 820,
+          "height": 820
+        },
+        {
+          "x": 1248,
+          "y": 180,
+          "width": 820,
+          "height": 820
+        },
+        {
+          "x": 332,
+          "y": 1096,
+          "width": 820,
+          "height": 820
+        },
+        {
+          "x": 1248,
+          "y": 1096,
+          "width": 820,
+          "height": 820
+        }
+      ],
+      "noteArea": {
+        "x": 0,
+        "y": 2096,
+        "width": 2400,
+        "height": 304
+      }
+    },
+    {
+      "layout": "square-nine",
+      "mode": "no-note",
+      "file": "black/square-nine-no-note.png",
+      "src": "/frames/black/square-nine-no-note.png",
+      "width": 3000,
+      "height": 3000,
+      "cutouts": [
+        {
+          "x": 225,
+          "y": 225,
+          "width": 770,
+          "height": 770
+        },
+        {
+          "x": 1115,
+          "y": 225,
+          "width": 770,
+          "height": 770
+        },
+        {
+          "x": 2005,
+          "y": 225,
+          "width": 770,
+          "height": 770
+        },
+        {
+          "x": 225,
+          "y": 1115,
+          "width": 770,
+          "height": 770
+        },
+        {
+          "x": 1115,
+          "y": 1115,
+          "width": 770,
+          "height": 770
+        },
+        {
+          "x": 2005,
+          "y": 1115,
+          "width": 770,
+          "height": 770
+        },
+        {
+          "x": 225,
+          "y": 2005,
+          "width": 770,
+          "height": 770
+        },
+        {
+          "x": 1115,
+          "y": 2005,
+          "width": 770,
+          "height": 770
+        },
+        {
+          "x": 2005,
+          "y": 2005,
+          "width": 770,
+          "height": 770
+        }
+      ],
+      "noteArea": null
+    },
+    {
+      "layout": "square-nine",
+      "mode": "with-note",
+      "file": "black/square-nine-with-note.png",
+      "src": "/frames/black/square-nine-with-note.png",
+      "width": 3000,
+      "height": 3000,
+      "cutouts": [
+        {
+          "x": 415,
+          "y": 226,
+          "width": 643,
+          "height": 643
+        },
+        {
+          "x": 1178,
+          "y": 226,
+          "width": 643,
+          "height": 643
+        },
+        {
+          "x": 1941,
+          "y": 226,
+          "width": 643,
+          "height": 643
+        },
+        {
+          "x": 415,
+          "y": 989,
+          "width": 643,
+          "height": 643
+        },
+        {
+          "x": 1178,
+          "y": 989,
+          "width": 643,
+          "height": 643
+        },
+        {
+          "x": 1941,
+          "y": 989,
+          "width": 643,
+          "height": 643
+        },
+        {
+          "x": 415,
+          "y": 1752,
+          "width": 643,
+          "height": 643
+        },
+        {
+          "x": 1178,
+          "y": 1752,
+          "width": 643,
+          "height": 643
+        },
+        {
+          "x": 1941,
+          "y": 1752,
+          "width": 643,
+          "height": 643
+        }
+      ],
+      "noteArea": {
+        "x": 0,
+        "y": 2621,
+        "width": 3000,
+        "height": 379
+      }
+    },
+    {
+      "layout": "portrait-six",
+      "mode": "no-note",
+      "file": "black/portrait-six-no-note.png",
+      "src": "/frames/black/portrait-six-no-note.png",
+      "width": 1800,
+      "height": 2700,
+      "cutouts": [
+        {
+          "x": 135,
+          "y": 184,
+          "width": 729,
+          "height": 729
+        },
+        {
+          "x": 936,
+          "y": 184,
+          "width": 729,
+          "height": 729
+        },
+        {
+          "x": 135,
+          "y": 985,
+          "width": 729,
+          "height": 729
+        },
+        {
+          "x": 936,
+          "y": 985,
+          "width": 729,
+          "height": 729
+        },
+        {
+          "x": 135,
+          "y": 1786,
+          "width": 729,
+          "height": 729
+        },
+        {
+          "x": 936,
+          "y": 1786,
+          "width": 729,
+          "height": 729
+        }
+      ],
+      "noteArea": null
+    },
+    {
+      "layout": "portrait-six",
+      "mode": "with-note",
+      "file": "black/portrait-six-with-note.png",
+      "src": "/frames/black/portrait-six-with-note.png",
+      "width": 1800,
+      "height": 2700,
+      "cutouts": [
+        {
+          "x": 178,
+          "y": 135,
+          "width": 686,
+          "height": 686
+        },
+        {
+          "x": 936,
+          "y": 135,
+          "width": 686,
+          "height": 686
+        },
+        {
+          "x": 178,
+          "y": 893,
+          "width": 686,
+          "height": 686
+        },
+        {
+          "x": 936,
+          "y": 893,
+          "width": 686,
+          "height": 686
+        },
+        {
+          "x": 178,
+          "y": 1651,
+          "width": 686,
+          "height": 686
+        },
+        {
+          "x": 936,
+          "y": 1651,
+          "width": 686,
+          "height": 686
+        }
+      ],
+      "noteArea": {
+        "x": 0,
+        "y": 2472,
+        "width": 1800,
+        "height": 228
+      }
+    },
+    {
+      "layout": "landscape-six",
+      "mode": "no-note",
+      "file": "black/landscape-six-no-note.png",
+      "src": "/frames/black/landscape-six-no-note.png",
+      "width": 2700,
+      "height": 1800,
+      "cutouts": [
+        {
+          "x": 184,
+          "y": 135,
+          "width": 729,
+          "height": 729
+        },
+        {
+          "x": 985,
+          "y": 135,
+          "width": 729,
+          "height": 729
+        },
+        {
+          "x": 1786,
+          "y": 135,
+          "width": 729,
+          "height": 729
+        },
+        {
+          "x": 184,
+          "y": 936,
+          "width": 729,
+          "height": 729
+        },
+        {
+          "x": 985,
+          "y": 936,
+          "width": 729,
+          "height": 729
+        },
+        {
+          "x": 1786,
+          "y": 936,
+          "width": 729,
+          "height": 729
+        }
+      ],
+      "noteArea": null
+    },
+    {
+      "layout": "landscape-six",
+      "mode": "with-note",
+      "file": "black/landscape-six-with-note.png",
+      "src": "/frames/black/landscape-six-with-note.png",
+      "width": 2700,
+      "height": 1800,
+      "cutouts": [
+        {
+          "x": 355,
+          "y": 135,
+          "width": 615,
+          "height": 615
+        },
+        {
+          "x": 1042,
+          "y": 135,
+          "width": 615,
+          "height": 615
+        },
+        {
+          "x": 1729,
+          "y": 135,
+          "width": 615,
+          "height": 615
+        },
+        {
+          "x": 355,
+          "y": 822,
+          "width": 615,
+          "height": 615
+        },
+        {
+          "x": 1042,
+          "y": 822,
+          "width": 615,
+          "height": 615
+        },
+        {
+          "x": 1729,
+          "y": 822,
+          "width": 615,
+          "height": 615
+        }
+      ],
+      "noteArea": {
+        "x": 0,
+        "y": 1572,
+        "width": 2700,
+        "height": 228
+      }
+    }
+  ]
+}

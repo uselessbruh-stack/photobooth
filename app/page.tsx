@@ -1,69 +1,85 @@
-import Image from "next/image";
+"use client";
+
+import { useEffect, useMemo, useRef, useState } from "react";
+import { formats, renderPrint, samplePhoto, MAX_NOTE_LENGTH } from "./lib/print-layout";
+import FormatPicker from "./format-picker";
+import { frameThemes } from "./lib/frame-themes";
+import { playBoothSound, setBoothSound, type BoothSound } from "./lib/booth-sound";
+
+type Stage = "outside" | "enter" | "style" | "ready" | "capture" | "develop" | "print" | "pickup";
+const looks = [
+  { name: "Original", note: "Just you, beautifully.", filter: "none", color: "#c8bde1", icon: "◉" },
+  { name: "B&W", note: "A timeless kind of magic.", filter: "grayscale(1) contrast(1.15)", color: "#6d6877", icon: "◐" },
+  { name: "Retro", note: "A little 1970s nostalgia.", filter: "sepia(.5) saturate(.75) contrast(.9)", color: "#c5a47f", icon: "☀" },
+  { name: "Lavender", note: "Life through lilac glasses.", filter: "sepia(.2) hue-rotate(225deg) saturate(.8)", color: "#c5c8e3", icon: "◒" },
+  { name: "Rose", note: "For the rosy little moments.", filter: "sepia(.3) hue-rotate(315deg) saturate(1.2)", color: "#d4bdc5", icon: "◌" },
+  { name: "Golden", note: "Forever in the golden hour.", filter: "sepia(.45) saturate(1.4) brightness(1.08)", color: "#d4b86e", icon: "✧" },
+];
+const papers = frameThemes;
+const sizes = formats;
+const poses = ["A smile that feels like you.", "Now, give us your silly side.", "A little peace & love?", "One last memory. Make it yours."];
+const wait = (ms:number) => new Promise(r=>setTimeout(r,ms));
 
 export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+  const [stage,setStage]=useState<Stage>("outside");
+  const [look,setLook]=useState(0),[paper,setPaper]=useState(papers.findIndex(theme=>theme.assetId==="baby-pink-hearts")),[size,setSize]=useState(0);
+  const [sound,setSound]=useState(false),[help,setHelp]=useState(false),[count,setCount]=useState(0),[shot,setShot]=useState(0),[flash,setFlash]=useState(false);
+  const [photos,setPhotos]=useState<string[]>([]),[result,setResult]=useState(""),[error,setError]=useState(""),[camera,setCamera]=useState(false),[demo,setDemo]=useState(false),[caption,setCaption]=useState(""),[printing,setPrinting]=useState(false);
+  const [previewImage,setPreviewImage]=useState("");
+  useEffect(()=>{setBoothSound(sound,false);},[sound]);
+  const demoFeed=useMemo(()=>demo?samplePhoto(shot,looks[look].filter):"",[demo,shot,look]);
+  const cameraRequest=useRef(0);
+  const video=useRef<HTMLVideoElement>(null),stream=useRef<MediaStream|null>(null),alive=useRef(true);
+  useEffect(()=>{window.scrollTo({top:0,behavior:"instant"});},[stage]);
+  useEffect(()=>{alive.current=true;return ()=>{alive.current=false;stream.current?.getTracks().forEach(t=>t.stop());setBoothSound(false);};},[]);
+  useEffect(()=>{if(video.current && stream.current) video.current.srcObject=stream.current;},[stage,camera]);
+  useEffect(()=>{let cancelled=false;const options={format:sizes[size],paper:papers[paper],frame:"plain",branding:false,date:false,caption};const samples=Array.from({length:sizes[size].count},(_,i)=>samplePhoto(i,looks[look].filter));renderPrint(samples,options,1000).then(src=>{if(!cancelled)setPreviewImage(src);}).catch(()=>{});return ()=>{cancelled=true;};},[size,paper,caption,look]);
+  async function enter(){setStage("enter");await wait(1700);if(alive.current)setStage("style");}
+  async function enableCamera(){const request=++cameraRequest.current;setError("");setDemo(false);try{if(!navigator.mediaDevices?.getUserMedia)throw new Error("Camera access needs localhost or HTTPS.");stream.current?.getTracks().forEach(t=>t.stop());const nextStream=await navigator.mediaDevices.getUserMedia({video:{facingMode:"user",width:{ideal:1280},height:{ideal:960}},audio:false});if(request!==cameraRequest.current||!alive.current){nextStream.getTracks().forEach(t=>t.stop());return;}stream.current=nextStream;setCamera(true);}catch(e){if(request!==cameraRequest.current)return;setCamera(false);setError(e instanceof Error && e.name==="NotAllowedError"?"Camera permission was declined. Allow it in your browser, then try again — or try a practice session.":"We couldn’t open your camera. Close other apps using it and try again, or take a practice session.");}}
+  function practice(){cameraRequest.current++;stream.current?.getTracks().forEach(t=>t.stop());stream.current=null;setCamera(false);setDemo(true);setError("");}
+  async function capture(){setStage("capture");setPhotos([]);const taken:string[]=[];for(let i=0;i<sizes[size].count;i++){setShot(i);for(let n=3;n>0;n--){if(!alive.current)return;setCount(n);playBoothSound("tick");await wait(850);}setCount(0);const c=document.createElement("canvas");c.width=900;c.height=900;const ctx=c.getContext("2d")!;ctx.filter=looks[look].filter;if(demo){const image=new Image();image.src=samplePhoto(i);await image.decode();ctx.drawImage(image,0,0,900,900);}else if(video.current && video.current.readyState>=2){ctx.translate(900,0);ctx.scale(-1,1);const v=video.current;const sw=v.videoWidth,sh=v.videoHeight;const edge=Math.min(sw,sh);ctx.drawImage(v,(sw-edge)/2,(sh-edge)/2,edge,edge,0,0,900,900);}else{setError("Your camera paused. Please reconnect it before trying again.");setStage("ready");return;}taken.push(c.toDataURL("image/jpeg",.93));setPhotos([...taken]);setFlash(true);playBoothSound("shutter");await wait(160);setFlash(false);await wait(650);}stream.current?.getTracks().forEach(t=>t.stop());stream.current=null;setCamera(false);setStage("develop");await compose(taken);await wait(2400);if(!alive.current)return;setStage("print");setPrinting(true);await wait(4400);if(alive.current)setPrinting(false);}
+  async function compose(items:string[]){setResult(await renderPrint(items,{format:sizes[size],paper:papers[paper],frame:"plain",branding:false,date:false,caption}));}
+  function restart(){setResult("");setPhotos([]);setStage("style");setDemo(false);setError("");}
+  function download(){const a=document.createElement("a");a.href=result;a.download=`little-moments-${sizes[size].id}.png`;a.click();}
+  async function share(){try{const blob=await(await fetch(result)).blob(),file=new File([blob],"little-moments.png",{type:"image/png"});if(navigator.canShare?.({files:[file]}))await navigator.share({files:[file],title:"My little moments"});else download();}catch(e){if(!(e instanceof Error && e.name==="AbortError"))download();}}
+  useEffect(()=>{if(stage==="enter")playBoothSound("arrival");if(stage==="develop")playBoothSound("develop");if(stage==="print")playBoothSound("printer");},[stage]);
+  useEffect(()=>{if(stage==="print"&&!printing)playBoothSound("ready");},[stage,printing]);
+  function interactionSound(event: React.MouseEvent<HTMLDivElement>) {
+    const element=(event.target as HTMLElement).closest<HTMLElement>('button,input,[role="option"]');
+    if(!element||element.hasAttribute("disabled")||element.dataset.sound==="toggle"||element.getAttribute("role")==="option")return;
+    const cue=element.dataset.sound as BoothSound|undefined;
+    playBoothSound(cue||(element.getAttribute("aria-haspopup")==="listbox"?"menu":element.hasAttribute("aria-pressed")?"select":element.classList.contains("close")?"close":"tap"));
+  }
+  const printerWidth=Math.min(650,Math.max(300,240*(sizes[size].w/sizes[size].h)+190));
+  const active=stage==="outside"?0:stage==="enter"||stage==="style"?1:stage==="ready"||stage==="capture"?2:3;
+  return <div className="site-shell" onClickCapture={interactionSound} onInputCapture={()=>playBoothSound("typing")}>
+    <header><button className="wordmark" onClick={()=>{if(stage==="outside")return;if(stage==="capture"||stage==="develop"||printing)return;stream.current?.getTracks().forEach(t=>t.stop());stream.current=null;setCamera(false);setStage("outside");}} aria-label="Little Moments home"><span className="logo-flower">▧</span> little moments<span className="wordmark-dot">®</span></button><nav><button onClick={()=>setHelp(true)}>A little guide <span>↗</span></button><button className="sound-button" data-sound="toggle" aria-pressed={sound} onClick={()=>{setSound(!sound);setBoothSound(!sound);}}>{sound?"♫":"♩"}<span>Sound {sound?"on":"off"}</span></button></nav></header>
+    <main><style>{`@media print { @page { size: ${sizes[size].w/300}in ${sizes[size].h/300}in; } .pickup-art>img { width: ${sizes[size].w/300}in !important; height: ${sizes[size].h/300}in !important; } }`}</style>
+    {stage==="outside"?<section className="landing scene-in">
+      <div className="hero-copy"><div className="eyebrow"><span/> YOUR OWN LITTLE PHOTO ATELIER</div><h1>Some moments<br/>deserve a<br/><em>little forever.</em><span className="title-star">✳</span></h1><p>A seat inside. A few good poses.<br/>A little strip of memories to keep.</p><button className="primary enter-button" onClick={enter}>Step into the booth <span>↗</span></button><div className="hero-footnote"><span className="tiny-star">✦</span> Free to make. Yours to keep.</div><div className="mini-journey"><span>choose your mood</span><i>⤳</i><span>strike a pose</span><i>⤳</i><span>keep a memory</span></div></div>
+      <div className="hero-art"><span className="handnote art-note">a little escape<br/>from the everyday <i>⤵</i></span><img src="/art/booth-sketch.png" alt="A simple hand-drawn photobooth colored in pale lavender pencil"/><span className="open-badge"><span/> THE BOOTH IS OPEN</span><div className="art-sparkle">✧</div><div className="art-caption">EST. FOR THE MOMENTS IN BETWEEN</div></div>
+      <div className="landing-bottom"><span>NO PERFECT POSES REQUIRED</span><span>✿</span><span>JUST COME AS YOU ARE</span></div>
+    </section>:<>
+      <div className="journey-bar">{["Arrive","Make it yours","Strike a pose","Keep forever"].map((s,i)=><div className={i===active?"current":i<active?"complete":""} key={s}><span>{i<active?"✓":`0${i+1}`}</span>{s}{i<3&&<i>· · · · ·</i>}</div>)}</div>
+      {stage==="enter"?<section className="curtain-scene"><div className="curtain left"/><div className="curtain right"/><div className="entrance-message"><span>✦</span><h2>Come on in.</h2><p>We saved you the best seat.</p></div></section>:null}
+      {stage==="style"?<section className="wall-setup scene-in">
+        <div className="section-heading"><div className="eyebrow">01 / INSIDE THE BOOTH</div><h2>Set the mood. <em>Make it yours.</em></h2><p>A few simple choices before you take your seat.</p></div>
+        <div className="setup-wall">
+          <img className="wall-backdrop" src="/art/interior-settings.png" alt="Hand-drawn lavender booth with a small square display, wall controls around it, and a clear bench"/>
+          <div className="wall-display-preview" aria-label="Your print preview"><img src={previewImage||undefined} alt={`${sizes[size].size} print layout preview with square photos`}/></div>
+          <fieldset className="wall-controls wall-film"><legend>Film look</legend><div className="wall-film-options">{looks.map((l,i)=><button key={l.name} aria-pressed={look===i} className={look===i?"selected":""} onClick={()=>{setLook(i);}}><span style={{background:l.color}}>{l.icon}</span>{l.name}</button>)}</div></fieldset>
+          <div className="wall-controls wall-format"><FormatPicker value={size} onChange={setSize}/></div>
+          <div className="wall-controls wall-frames"><FormatPicker value={paper} onChange={setPaper} label="Frame style" heading="pick your frame" footer="a border for your story" options={papers.map(p=>({label:p.name,color:p.color,ink:p.ink,swatch:p.assetId}))}/></div>
+          <label className="wall-note" htmlFor="strip-note"><span>Text on your strip <small>{Array.from(caption).length}/{MAX_NOTE_LENGTH} · optional</small></span><input id="strip-note" value={caption} maxLength={MAX_NOTE_LENGTH} onChange={e=>setCaption(Array.from(e.target.value).slice(0,MAX_NOTE_LENGTH).join(""))} placeholder="Add a little note…"/></label>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+        <div className="wall-session-footer"><span>{looks[look].name} · {papers[paper].name} · {sizes[size].size}</span><button className="primary" onClick={()=>setStage("ready")}>Take a seat <span>→</span></button></div>
+      </section>:null}
+      {(stage==="ready"||stage==="capture")?<section className="capture-section scene-in"><div className="section-heading"><div className="eyebrow">02 / GET COMFORTABLE</div><h2>{stage==="capture"?<>Let’s make <em>a memory.</em></>:<>Take a seat. <em>Be yourself.</em></>}</h2><p>{stage==="capture"?poses[shot%poses.length]:"Settle in, find your light, and let yourself be a little silly."}</p></div><div className="display-closeup"><div className="display-feed"><video ref={video} autoPlay playsInline muted style={{filter:looks[look].filter}} className={camera?"":"hidden"}/>{demo&&<img className="practice-feed" src={demoFeed} alt="Practice portrait displayed inside the booth screen"/>}{!camera&&!demo&&<div className="camera-placeholder"><span>◎</span><strong>Your seat. Your screen.</strong><small>Enable your camera to see yourself in the display.</small></div>}{count>0&&<div className="countdown" key={`${shot}-${count}`}>{count}</div>}{flash&&<div className="flash"/>}<span className="live-indicator">{demo?"PRACTICE":camera?"LIVE · MIRRORED":"CAMERA OFF"}</span><span className="film-indicator">{looks[look].name.toUpperCase()}</span></div><img className="display-overlay" src="/art/display-overlay.png" alt="Close-up pencil-drawn square display frame with a transparent screen opening"/><span className="display-caption">LOOK HERE · MAKE A MEMORY</span></div><div className="shot-progress">{Array.from({length:sizes[size].count},(_,i)=><span key={i} className={photos[i]?"done":""}>{photos[i]?"✓":`0${i+1}`}</span>)}</div>{error&&<p className="error" role="alert">{error}</p>}<div className="capture-controls">{stage==="ready"?<><button className="text-button" onClick={()=>{stream.current?.getTracks().forEach(t=>t.stop());stream.current=null;setCamera(false);setStage("style");}}>← Back to my mood</button>{!camera&&!demo?<button className="primary" onClick={enableCamera}>Enable my camera <span>◎</span></button>:<button className="primary" onClick={capture}>I’m ready. Let’s do this <span>✦</span></button>}<button className="text-button" onClick={camera||demo?enableCamera:practice}>{camera||demo?"Reconnect camera":"Try a practice session"}</button></>:<span className="capture-note">{count?"Find your pose…":"A little magic, coming right up."} · {Math.min(photos.length+1,sizes[size].count)} of {sizes[size].count}</span>}</div><p className="privacy-note">⌁ Your photos stay in your browser. Just between you and the booth.</p></section>:null}
+      {stage==="develop"?<section className="develop scene-in"><div className="develop-flower">✿</div><div className="eyebrow">A LITTLE PATIENCE, A LITTLE MAGIC</div><h2>Good things<br/><em>take a moment.</em></h2><p>Your memories are developing.</p><div className="loading-dots"><i/><i/><i/></div></section>:null}
+      {stage==="print"?<section className="print-scene scene-in"><div className="section-heading"><div className="eyebrow">03 / MADE TO BE KEPT</div><h2>{printing?<>Printing a <em>little happiness.</em></>:<>A moment, <em>made yours.</em></>}</h2><p>{printing?"Fresh memories. Please handle with love.":"Your little keepsake is ready. Go on, pick it up."}</p></div><div className="printer" style={{width:`min(100%, ${printerWidth}px)`}}><div className="printer-top"><span className="printer-light"/> LITTLE MOMENTS PHOTO LAB <span>✿</span></div><div className="printer-slot"/><div className="print-window"><img style={{maxWidth:"88%",maxHeight:290,width:"auto",height:"auto",aspectRatio:`${sizes[size].w}/${sizes[size].h}`}} src={result} className={`emerging-strip ${printing?"printing":""}`} alt="Your freshly printed photo strip"/></div><span className="printer-label">MEMORIES DELIVERED HERE ↓</span></div><button className="primary" disabled={printing} onClick={()=>{setStage("pickup");}}>{printing?"Making a little forever…":"Pick up my memories"}<span>↓</span></button></section>:null}
+      {stage==="pickup"?<section className="pickup scene-in"><div className="pickup-art"><span className="handnote">look what we made ⤵</span><img src={result} alt="Your finished Little Moments photo strip"/></div><div className="pickup-copy"><div className="eyebrow">A LITTLE FOREVER, JUST FOR YOU</div><h2>You had to<br/><em>be there.</em></h2><p>And now, a little piece of this moment<br/>gets to come home with you.</p><div className="result-tags"><span>{looks[look].name}</span><span>{papers[paper].name}</span><span>{sizes[size].size}</span><span>{papers[paper].name} frame</span></div><button className="primary" data-sound="download" onClick={download}>Keep my strip <span>↓</span></button><div className="secondary-actions"><button onClick={share}>Share a moment ↗</button><button onClick={()=>window.print()}>Print it out ⎙</button></div><button className="text-button restart" onClick={restart}>↶ One more little moment?</button><small>Made with a little lavender & a lot of love. ✿</small></div></section>:null}
+    </>}
+    </main><footer><span>A SMALL BOOTH. A GOOD MEMORY.</span><span>Made for the memories <i>♡</i></span><button onClick={()=>setHelp(true)}>How it works ↗</button></footer>
+    {help&&<div className="modal-backdrop" onClick={()=>setHelp(false)}><section className="guide" role="dialog" aria-modal="true" aria-label="A little guide" onClick={e=>e.stopPropagation()}><button className="close" aria-label="Close guide" onClick={()=>setHelp(false)}>×</button><span className="logo-flower">✿</span><h2>A little guide.</h2><p>01 — Step inside and choose a film look, colored frame, and layout.</p><p>02 — Enable your camera. Each pose gets a three-second countdown. Or try a clearly labeled illustrated practice session.</p><p>03 — Let your photos develop, watch the printer, and pick up your strip.</p><p>04 — Download your high-resolution PNG or share it. You can print it at any size that keeps the same aspect ratio.</p><small>Camera requires localhost or HTTPS. Photos are processed here in your browser and aren’t uploaded.</small><button className="primary" onClick={()=>setHelp(false)}>Lovely. Let’s make a memory →</button></section></div>}
+    </div>;
 }

@@ -1,0 +1,957 @@
+{
+  "name": "Dihbooth film",
+  "assetId": "dihbooth-film",
+  "color": "#000000",
+  "ink": "#ffffff",
+  "assetMode": "pattern",
+  "variants": [
+    {
+      "layout": "strip-three",
+      "mode": "no-note",
+      "file": "dihbooth-film/strip-three-no-note.png",
+      "src": "/frames/dihbooth-film/strip-three-no-note.png",
+      "width": 1200,
+      "height": 3600,
+      "cutouts": [
+        {
+          "x": 144,
+          "y": 306,
+          "width": 912,
+          "height": 912
+        },
+        {
+          "x": 144,
+          "y": 1344,
+          "width": 912,
+          "height": 912
+        },
+        {
+          "x": 144,
+          "y": 2382,
+          "width": 912,
+          "height": 912
+        }
+      ],
+      "perforations": [],
+      "brandText": "Dihbooth",
+      "labels": [
+        {
+          "text": "Dihbooth",
+          "dividerIndex": 0
+        },
+        {
+          "text": "Dihbooth",
+          "dividerIndex": 1
+        }
+      ],
+      "leftLineMarks": 66,
+      "leftLinesMeetPhotoEdge": true,
+      "artwork": [
+        "assets/left-meter-lines.png",
+        "assets/play-pause.png",
+        "assets/play-up.png",
+        "assets/divider-pause.png"
+      ],
+      "rightControl": "unboxed white bars with a gold up-triangle beside each photo; elongated upward pause mark in each divider",
+      "noteArea": null
+    },
+    {
+      "layout": "strip-three",
+      "mode": "with-note",
+      "file": "dihbooth-film/strip-three-with-note.png",
+      "src": "/frames/dihbooth-film/strip-three-with-note.png",
+      "width": 1200,
+      "height": 3600,
+      "cutouts": [
+        {
+          "x": 144,
+          "y": 230,
+          "width": 912,
+          "height": 912
+        },
+        {
+          "x": 144,
+          "y": 1268,
+          "width": 912,
+          "height": 912
+        },
+        {
+          "x": 144,
+          "y": 2306,
+          "width": 912,
+          "height": 912
+        }
+      ],
+      "perforations": [],
+      "brandText": "Dihbooth",
+      "labels": [
+        {
+          "text": "Dihbooth",
+          "dividerIndex": 0
+        },
+        {
+          "text": "Dihbooth",
+          "dividerIndex": 1
+        }
+      ],
+      "leftLineMarks": 66,
+      "leftLinesMeetPhotoEdge": true,
+      "artwork": [
+        "assets/left-meter-lines.png",
+        "assets/play-pause.png",
+        "assets/play-up.png",
+        "assets/divider-pause.png"
+      ],
+      "rightControl": "unboxed white bars with a gold up-triangle beside each photo; elongated upward pause mark in each divider",
+      "noteArea": {
+        "x": 144,
+        "y": 3453,
+        "width": 912,
+        "height": 142
+      }
+    },
+    {
+      "layout": "strip-two",
+      "mode": "no-note",
+      "file": "dihbooth-film/strip-two-no-note.png",
+      "src": "/frames/dihbooth-film/strip-two-no-note.png",
+      "width": 1200,
+      "height": 2400,
+      "cutouts": [
+        {
+          "x": 144,
+          "y": 225,
+          "width": 912,
+          "height": 912
+        },
+        {
+          "x": 144,
+          "y": 1263,
+          "width": 912,
+          "height": 912
+        }
+      ],
+      "perforations": [],
+      "brandText": "Dihbooth",
+      "labels": [
+        {
+          "text": "Dihbooth",
+          "dividerIndex": 0
+        }
+      ],
+      "leftLineMarks": 44,
+      "leftLinesMeetPhotoEdge": true,
+      "artwork": [
+        "assets/left-meter-lines.png",
+        "assets/play-pause.png",
+        "assets/play-up.png",
+        "assets/divider-pause.png"
+      ],
+      "rightControl": "unboxed white bars with a gold up-triangle beside each photo; elongated upward pause mark in each divider",
+      "noteArea": null
+    },
+    {
+      "layout": "strip-two",
+      "mode": "with-note",
+      "file": "dihbooth-film/strip-two-with-note.png",
+      "src": "/frames/dihbooth-film/strip-two-with-note.png",
+      "width": 1200,
+      "height": 2400,
+      "cutouts": [
+        {
+          "x": 144,
+          "y": 149,
+          "width": 912,
+          "height": 912
+        },
+        {
+          "x": 144,
+          "y": 1187,
+          "width": 912,
+          "height": 912
+        }
+      ],
+      "perforations": [],
+      "brandText": "Dihbooth",
+      "labels": [
+        {
+          "text": "Dihbooth",
+          "dividerIndex": 0
+        }
+      ],
+      "leftLineMarks": 44,
+      "leftLinesMeetPhotoEdge": true,
+      "artwork": [
+        "assets/left-meter-lines.png",
+        "assets/play-pause.png",
+        "assets/play-up.png",
+        "assets/divider-pause.png"
+      ],
+      "rightControl": "unboxed white bars with a gold up-triangle beside each photo; elongated upward pause mark in each divider",
+      "noteArea": {
+        "x": 144,
+        "y": 2253,
+        "width": 912,
+        "height": 142
+      }
+    },
+    {
+      "layout": "strip-four",
+      "mode": "no-note",
+      "file": "dihbooth-film/strip-four-no-note.png",
+      "src": "/frames/dihbooth-film/strip-four-no-note.png",
+      "width": 1200,
+      "height": 4800,
+      "cutouts": [
+        {
+          "x": 144,
+          "y": 387,
+          "width": 912,
+          "height": 912
+        },
+        {
+          "x": 144,
+          "y": 1425,
+          "width": 912,
+          "height": 912
+        },
+        {
+          "x": 144,
+          "y": 2463,
+          "width": 912,
+          "height": 912
+        },
+        {
+          "x": 144,
+          "y": 3501,
+          "width": 912,
+          "height": 912
+        }
+      ],
+      "perforations": [],
+      "brandText": "Dihbooth",
+      "labels": [
+        {
+          "text": "Dihbooth",
+          "dividerIndex": 0
+        },
+        {
+          "text": "Dihbooth",
+          "dividerIndex": 1
+        },
+        {
+          "text": "Dihbooth",
+          "dividerIndex": 2
+        }
+      ],
+      "leftLineMarks": 88,
+      "leftLinesMeetPhotoEdge": true,
+      "artwork": [
+        "assets/left-meter-lines.png",
+        "assets/play-pause.png",
+        "assets/play-up.png",
+        "assets/divider-pause.png"
+      ],
+      "rightControl": "unboxed white bars with a gold up-triangle beside each photo; elongated upward pause mark in each divider",
+      "noteArea": null
+    },
+    {
+      "layout": "strip-four",
+      "mode": "with-note",
+      "file": "dihbooth-film/strip-four-with-note.png",
+      "src": "/frames/dihbooth-film/strip-four-with-note.png",
+      "width": 1200,
+      "height": 4800,
+      "cutouts": [
+        {
+          "x": 144,
+          "y": 311,
+          "width": 912,
+          "height": 912
+        },
+        {
+          "x": 144,
+          "y": 1349,
+          "width": 912,
+          "height": 912
+        },
+        {
+          "x": 144,
+          "y": 2387,
+          "width": 912,
+          "height": 912
+        },
+        {
+          "x": 144,
+          "y": 3425,
+          "width": 912,
+          "height": 912
+        }
+      ],
+      "perforations": [],
+      "brandText": "Dihbooth",
+      "labels": [
+        {
+          "text": "Dihbooth",
+          "dividerIndex": 0
+        },
+        {
+          "text": "Dihbooth",
+          "dividerIndex": 1
+        },
+        {
+          "text": "Dihbooth",
+          "dividerIndex": 2
+        }
+      ],
+      "leftLineMarks": 88,
+      "leftLinesMeetPhotoEdge": true,
+      "artwork": [
+        "assets/left-meter-lines.png",
+        "assets/play-pause.png",
+        "assets/play-up.png",
+        "assets/divider-pause.png"
+      ],
+      "rightControl": "unboxed white bars with a gold up-triangle beside each photo; elongated upward pause mark in each divider",
+      "noteArea": {
+        "x": 144,
+        "y": 4653,
+        "width": 912,
+        "height": 142
+      }
+    },
+    {
+      "layout": "square-single",
+      "mode": "no-note",
+      "file": "dihbooth-film/square-single-no-note.png",
+      "src": "/frames/dihbooth-film/square-single-no-note.png",
+      "width": 1800,
+      "height": 1800,
+      "cutouts": [
+        {
+          "x": 229,
+          "y": 135,
+          "width": 1341,
+          "height": 1341
+        }
+      ],
+      "perforations": [],
+      "brandText": "Dihbooth",
+      "labels": [
+        {
+          "text": "Dihbooth",
+          "dividerIndex": 0
+        }
+      ],
+      "leftLineMarks": 22,
+      "leftLinesMeetPhotoEdge": true,
+      "artwork": [
+        "assets/left-meter-lines.png",
+        "assets/play-pause.png",
+        "assets/play-up.png",
+        "assets/divider-pause.png"
+      ],
+      "rightControl": "unboxed white bars with a gold up-triangle beside each photo; elongated upward pause mark in each divider",
+      "noteArea": null
+    },
+    {
+      "layout": "square-single",
+      "mode": "with-note",
+      "file": "dihbooth-film/square-single-with-note.png",
+      "src": "/frames/dihbooth-film/square-single-with-note.png",
+      "width": 1800,
+      "height": 1800,
+      "cutouts": [
+        {
+          "x": 343,
+          "y": 135,
+          "width": 1113,
+          "height": 1113
+        }
+      ],
+      "perforations": [],
+      "brandText": "Dihbooth",
+      "labels": [
+        {
+          "text": "Dihbooth",
+          "dividerIndex": 0
+        }
+      ],
+      "leftLineMarks": 22,
+      "leftLinesMeetPhotoEdge": true,
+      "artwork": [
+        "assets/left-meter-lines.png",
+        "assets/play-pause.png",
+        "assets/play-up.png",
+        "assets/divider-pause.png"
+      ],
+      "rightControl": "unboxed white bars with a gold up-triangle beside each photo; elongated upward pause mark in each divider",
+      "noteArea": {
+        "x": 216,
+        "y": 1579,
+        "width": 1368,
+        "height": 214
+      }
+    },
+    {
+      "layout": "square-four",
+      "mode": "no-note",
+      "file": "dihbooth-film/square-four-no-note.png",
+      "src": "/frames/dihbooth-film/square-four-no-note.png",
+      "width": 2400,
+      "height": 2400,
+      "cutouts": [
+        {
+          "x": 288,
+          "y": 210,
+          "width": 864,
+          "height": 864
+        },
+        {
+          "x": 1248,
+          "y": 210,
+          "width": 864,
+          "height": 864
+        },
+        {
+          "x": 288,
+          "y": 1326,
+          "width": 864,
+          "height": 864
+        },
+        {
+          "x": 1248,
+          "y": 1326,
+          "width": 864,
+          "height": 864
+        }
+      ],
+      "perforations": [],
+      "brandText": "Dihbooth",
+      "labels": [
+        {
+          "text": "Dihbooth",
+          "dividerIndex": 0
+        }
+      ],
+      "leftLineMarks": 44,
+      "leftLinesMeetPhotoEdge": true,
+      "artwork": [
+        "assets/left-meter-lines.png",
+        "assets/play-pause.png",
+        "assets/play-up.png",
+        "assets/divider-pause.png"
+      ],
+      "rightControl": "unboxed white bars with a gold up-triangle beside each photo; elongated upward pause mark in each divider",
+      "noteArea": null
+    },
+    {
+      "layout": "square-four",
+      "mode": "with-note",
+      "file": "dihbooth-film/square-four-with-note.png",
+      "src": "/frames/dihbooth-film/square-four-with-note.png",
+      "width": 2400,
+      "height": 2400,
+      "cutouts": [
+        {
+          "x": 410,
+          "y": 180,
+          "width": 742,
+          "height": 742
+        },
+        {
+          "x": 1248,
+          "y": 180,
+          "width": 742,
+          "height": 742
+        },
+        {
+          "x": 410,
+          "y": 1174,
+          "width": 742,
+          "height": 742
+        },
+        {
+          "x": 1248,
+          "y": 1174,
+          "width": 742,
+          "height": 742
+        }
+      ],
+      "perforations": [],
+      "brandText": "Dihbooth",
+      "labels": [
+        {
+          "text": "Dihbooth",
+          "dividerIndex": 0
+        }
+      ],
+      "leftLineMarks": 44,
+      "leftLinesMeetPhotoEdge": true,
+      "artwork": [
+        "assets/left-meter-lines.png",
+        "assets/play-pause.png",
+        "assets/play-up.png",
+        "assets/divider-pause.png"
+      ],
+      "rightControl": "unboxed white bars with a gold up-triangle beside each photo; elongated upward pause mark in each divider",
+      "noteArea": {
+        "x": 288,
+        "y": 2106,
+        "width": 1824,
+        "height": 284
+      }
+    },
+    {
+      "layout": "square-nine",
+      "mode": "no-note",
+      "file": "dihbooth-film/square-nine-no-note.png",
+      "src": "/frames/dihbooth-film/square-nine-no-note.png",
+      "width": 3000,
+      "height": 3000,
+      "cutouts": [
+        {
+          "x": 420,
+          "y": 225,
+          "width": 640,
+          "height": 640
+        },
+        {
+          "x": 1180,
+          "y": 225,
+          "width": 640,
+          "height": 640
+        },
+        {
+          "x": 1940,
+          "y": 225,
+          "width": 640,
+          "height": 640
+        },
+        {
+          "x": 420,
+          "y": 1180,
+          "width": 640,
+          "height": 640
+        },
+        {
+          "x": 1180,
+          "y": 1180,
+          "width": 640,
+          "height": 640
+        },
+        {
+          "x": 1940,
+          "y": 1180,
+          "width": 640,
+          "height": 640
+        },
+        {
+          "x": 420,
+          "y": 2135,
+          "width": 640,
+          "height": 640
+        },
+        {
+          "x": 1180,
+          "y": 2135,
+          "width": 640,
+          "height": 640
+        },
+        {
+          "x": 1940,
+          "y": 2135,
+          "width": 640,
+          "height": 640
+        }
+      ],
+      "perforations": [],
+      "brandText": "Dihbooth",
+      "labels": [
+        {
+          "text": "Dihbooth",
+          "dividerIndex": 0
+        },
+        {
+          "text": "Dihbooth",
+          "dividerIndex": 1
+        }
+      ],
+      "leftLineMarks": 66,
+      "leftLinesMeetPhotoEdge": true,
+      "artwork": [
+        "assets/left-meter-lines.png",
+        "assets/play-pause.png",
+        "assets/play-up.png",
+        "assets/divider-pause.png"
+      ],
+      "rightControl": "unboxed white bars with a gold up-triangle beside each photo; elongated upward pause mark in each divider",
+      "noteArea": null
+    },
+    {
+      "layout": "square-nine",
+      "mode": "with-note",
+      "file": "dihbooth-film/square-nine-with-note.png",
+      "src": "/frames/dihbooth-film/square-nine-with-note.png",
+      "width": 3000,
+      "height": 3000,
+      "cutouts": [
+        {
+          "x": 610,
+          "y": 226,
+          "width": 513,
+          "height": 513
+        },
+        {
+          "x": 1243,
+          "y": 226,
+          "width": 513,
+          "height": 513
+        },
+        {
+          "x": 1876,
+          "y": 226,
+          "width": 513,
+          "height": 513
+        },
+        {
+          "x": 610,
+          "y": 1054,
+          "width": 513,
+          "height": 513
+        },
+        {
+          "x": 1243,
+          "y": 1054,
+          "width": 513,
+          "height": 513
+        },
+        {
+          "x": 1876,
+          "y": 1054,
+          "width": 513,
+          "height": 513
+        },
+        {
+          "x": 610,
+          "y": 1882,
+          "width": 513,
+          "height": 513
+        },
+        {
+          "x": 1243,
+          "y": 1882,
+          "width": 513,
+          "height": 513
+        },
+        {
+          "x": 1876,
+          "y": 1882,
+          "width": 513,
+          "height": 513
+        }
+      ],
+      "perforations": [],
+      "brandText": "Dihbooth",
+      "labels": [
+        {
+          "text": "Dihbooth",
+          "dividerIndex": 0
+        },
+        {
+          "text": "Dihbooth",
+          "dividerIndex": 1
+        }
+      ],
+      "leftLineMarks": 66,
+      "leftLinesMeetPhotoEdge": true,
+      "artwork": [
+        "assets/left-meter-lines.png",
+        "assets/play-pause.png",
+        "assets/play-up.png",
+        "assets/divider-pause.png"
+      ],
+      "rightControl": "unboxed white bars with a gold up-triangle beside each photo; elongated upward pause mark in each divider",
+      "noteArea": {
+        "x": 360,
+        "y": 2633,
+        "width": 2280,
+        "height": 355
+      }
+    },
+    {
+      "layout": "portrait-six",
+      "mode": "no-note",
+      "file": "dihbooth-film/portrait-six-no-note.png",
+      "src": "/frames/dihbooth-film/portrait-six-no-note.png",
+      "width": 1800,
+      "height": 2700,
+      "cutouts": [
+        {
+          "x": 216,
+          "y": 189,
+          "width": 648,
+          "height": 648
+        },
+        {
+          "x": 936,
+          "y": 189,
+          "width": 648,
+          "height": 648
+        },
+        {
+          "x": 216,
+          "y": 1026,
+          "width": 648,
+          "height": 648
+        },
+        {
+          "x": 936,
+          "y": 1026,
+          "width": 648,
+          "height": 648
+        },
+        {
+          "x": 216,
+          "y": 1863,
+          "width": 648,
+          "height": 648
+        },
+        {
+          "x": 936,
+          "y": 1863,
+          "width": 648,
+          "height": 648
+        }
+      ],
+      "perforations": [],
+      "brandText": "Dihbooth",
+      "labels": [
+        {
+          "text": "Dihbooth",
+          "dividerIndex": 0
+        },
+        {
+          "text": "Dihbooth",
+          "dividerIndex": 1
+        }
+      ],
+      "leftLineMarks": 66,
+      "leftLinesMeetPhotoEdge": true,
+      "artwork": [
+        "assets/left-meter-lines.png",
+        "assets/play-pause.png",
+        "assets/play-up.png",
+        "assets/divider-pause.png"
+      ],
+      "rightControl": "unboxed white bars with a gold up-triangle beside each photo; elongated upward pause mark in each divider",
+      "noteArea": null
+    },
+    {
+      "layout": "portrait-six",
+      "mode": "with-note",
+      "file": "dihbooth-film/portrait-six-with-note.png",
+      "src": "/frames/dihbooth-film/portrait-six-with-note.png",
+      "width": 1800,
+      "height": 2700,
+      "cutouts": [
+        {
+          "x": 256,
+          "y": 135,
+          "width": 608,
+          "height": 608
+        },
+        {
+          "x": 936,
+          "y": 135,
+          "width": 608,
+          "height": 608
+        },
+        {
+          "x": 256,
+          "y": 932,
+          "width": 608,
+          "height": 608
+        },
+        {
+          "x": 936,
+          "y": 932,
+          "width": 608,
+          "height": 608
+        },
+        {
+          "x": 256,
+          "y": 1729,
+          "width": 608,
+          "height": 608
+        },
+        {
+          "x": 936,
+          "y": 1729,
+          "width": 608,
+          "height": 608
+        }
+      ],
+      "perforations": [],
+      "brandText": "Dihbooth",
+      "labels": [
+        {
+          "text": "Dihbooth",
+          "dividerIndex": 0
+        },
+        {
+          "text": "Dihbooth",
+          "dividerIndex": 1
+        }
+      ],
+      "leftLineMarks": 66,
+      "leftLinesMeetPhotoEdge": true,
+      "artwork": [
+        "assets/left-meter-lines.png",
+        "assets/play-pause.png",
+        "assets/play-up.png",
+        "assets/divider-pause.png"
+      ],
+      "rightControl": "unboxed white bars with a gold up-triangle beside each photo; elongated upward pause mark in each divider",
+      "noteArea": {
+        "x": 216,
+        "y": 2479,
+        "width": 1368,
+        "height": 214
+      }
+    },
+    {
+      "layout": "landscape-six",
+      "mode": "no-note",
+      "file": "dihbooth-film/landscape-six-no-note.png",
+      "src": "/frames/dihbooth-film/landscape-six-no-note.png",
+      "width": 2700,
+      "height": 1800,
+      "cutouts": [
+        {
+          "x": 273,
+          "y": 135,
+          "width": 670,
+          "height": 670
+        },
+        {
+          "x": 1015,
+          "y": 135,
+          "width": 670,
+          "height": 670
+        },
+        {
+          "x": 1757,
+          "y": 135,
+          "width": 670,
+          "height": 670
+        },
+        {
+          "x": 273,
+          "y": 994,
+          "width": 670,
+          "height": 670
+        },
+        {
+          "x": 1015,
+          "y": 994,
+          "width": 670,
+          "height": 670
+        },
+        {
+          "x": 1757,
+          "y": 994,
+          "width": 670,
+          "height": 670
+        }
+      ],
+      "perforations": [],
+      "brandText": "Dihbooth",
+      "labels": [
+        {
+          "text": "Dihbooth",
+          "dividerIndex": 0
+        }
+      ],
+      "leftLineMarks": 44,
+      "leftLinesMeetPhotoEdge": true,
+      "artwork": [
+        "assets/left-meter-lines.png",
+        "assets/play-pause.png",
+        "assets/play-up.png",
+        "assets/divider-pause.png"
+      ],
+      "rightControl": "unboxed white bars with a gold up-triangle beside each photo; elongated upward pause mark in each divider",
+      "noteArea": null
+    },
+    {
+      "layout": "landscape-six",
+      "mode": "with-note",
+      "file": "dihbooth-film/landscape-six-with-note.png",
+      "src": "/frames/dihbooth-film/landscape-six-with-note.png",
+      "width": 2700,
+      "height": 1800,
+      "cutouts": [
+        {
+          "x": 444,
+          "y": 135,
+          "width": 556,
+          "height": 556
+        },
+        {
+          "x": 1072,
+          "y": 135,
+          "width": 556,
+          "height": 556
+        },
+        {
+          "x": 1700,
+          "y": 135,
+          "width": 556,
+          "height": 556
+        },
+        {
+          "x": 444,
+          "y": 880,
+          "width": 556,
+          "height": 556
+        },
+        {
+          "x": 1072,
+          "y": 880,
+          "width": 556,
+          "height": 556
+        },
+        {
+          "x": 1700,
+          "y": 880,
+          "width": 556,
+          "height": 556
+        }
+      ],
+      "perforations": [],
+      "brandText": "Dihbooth",
+      "labels": [
+        {
+          "text": "Dihbooth",
+          "dividerIndex": 0
+        }
+      ],
+      "leftLineMarks": 44,
+      "leftLinesMeetPhotoEdge": true,
+      "artwork": [
+        "assets/left-meter-lines.png",
+        "assets/play-pause.png",
+        "assets/play-up.png",
+        "assets/divider-pause.png"
+      ],
+      "rightControl": "unboxed white bars with a gold up-triangle beside each photo; elongated upward pause mark in each divider",
+      "noteArea": {
+        "x": 216,
+        "y": 1579,
+        "width": 2268,
+        "height": 214
+      }
+    }
+  ]
+}
