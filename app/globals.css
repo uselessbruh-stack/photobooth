@@ -121,6 +121,10 @@ header{border-width:0 0 1px}footer{border-width:1px 0 0}
 .wall-capture-options>button{min-height:27px;padding:2px 5px;gap:5px;font-size:12px}
 .wall-capture-options>button>span:first-child{width:16px;height:16px;font-size:13px}
 .wall-capture-options small{font-size:9px}
+.wall-capture{padding-bottom:10px}
+.wall-capture-options>button{min-height:35px;padding:3px 6px}
+.wall-capture-options>button>span:last-child{line-height:1.05}
+.wall-capture-options strong,.wall-capture-options small{display:block;line-height:1.1}
 @media(min-width:761px) and (max-width:1050px){.wall-capture{left:38%;width:24%;top:39%}}
-@media(max-width:760px){.wall-capture{left:12%;top:68%;width:35%;padding:8px 7px 7px}.wall-capture legend{font-size:17px;margin-bottom:3px}.wall-capture-options{gap:1px}.wall-capture-options>button{min-height:25px;padding:2px 4px;gap:4px;font-size:12px}.wall-capture-options>button>span:first-child{width:16px;height:16px;font-size:12px}}
-@media(max-width:380px){.wall-capture{left:10%;top:68%;width:38%;padding:7px 5px 6px}.wall-capture legend{font-size:15px}.wall-capture-options>button{min-height:23px;font-size:11px}}
+@media(max-width:760px){.wall-capture{left:12%;top:68%;width:35%;padding:8px 7px 9px}.wall-capture legend{font-size:17px;margin-bottom:3px}.wall-capture-options{gap:1px}.wall-capture-options>button{min-height:29px;padding:3px 4px;gap:4px;font-size:12px}.wall-capture-options>button>span:first-child{width:16px;height:16px;font-size:12px}.wall-capture-options small{display:none}}
+@media(max-width:380px){.wall-capture{left:10%;top:68%;width:38%;padding:7px 5px 8px}.wall-capture legend{font-size:15px}.wall-capture-options>button{min-height:27px;font-size:11px}}
