@@ -97,52 +97,6 @@ function findPhotoWindows(artwork: HTMLImageElement, expected: number): PhotoWin
     .sort((a, b) => a.y - b.y || a.x - b.x);
 }
 
-function findTransparentWindows(artwork: HTMLImageElement, expected: number): PhotoWindow[] {
-  const canvas = document.createElement("canvas");
-  canvas.width = artwork.naturalWidth; canvas.height = artwork.naturalHeight;
-  const ctx = canvas.getContext("2d", { willReadFrequently: true });
-  if (!ctx) return [];
-  ctx.drawImage(artwork, 0, 0);
-  const pixels = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
-  const minRun = Math.min(canvas.width, canvas.height) * .12;
-  const yStep = Math.max(1, Math.floor(canvas.height / 1800));
-  const runs = new Map<string, { x: number; width: number; ys: number[] }>();
-  for (let y = 0; y < canvas.height; y += yStep) {
-    let start = -1;
-    for (let x = 0; x <= canvas.width; x++) {
-      const clear = x < canvas.width && pixels[(y * canvas.width + x) * 4 + 3] < 8;
-      if (clear && start < 0) start = x;
-      if ((!clear || x === canvas.width) && start >= 0) {
-        const width = x - start;
-        if (width >= minRun) {
-          const key = `${start}:${x}`;
-          const run = runs.get(key) ?? { x: start, width, ys: [] };
-          run.ys.push(y); runs.set(key, run);
-        }
-        start = -1;
-      }
-    }
-  }
-  const candidates: PhotoWindow[] = [];
-  const minHeight = Math.min(canvas.width, canvas.height) * .1;
-  for (const run of runs.values()) {
-    let start = run.ys[0], previous = start;
-    const add = (end: number) => {
-      if (end - start >= minHeight) candidates.push({ x: run.x, y: start, width: run.width, height: end - start });
-    };
-    for (let i = 1; i < run.ys.length; i++) {
-      const current = run.ys[i];
-      if (current - previous > yStep * 2) { add(previous + yStep); start = current; }
-      previous = current;
-    }
-    add(previous + yStep);
-  }
-  return candidates
-    .sort((a, b) => b.width * b.height - a.width * a.height)
-    .slice(0, expected)
-    .sort((a, b) => a.y - b.y || a.x - b.x);
-}
-
 function drawPhotoInWindow(ctx: CanvasRenderingContext2D, image: HTMLImageElement, window: PhotoWindow) {
   const sourceRatio = image.naturalWidth / image.naturalHeight;
   const targetRatio = window.width / window.height;
@@ -319,9 +273,11 @@ export async function renderPrint(items: string[], options: PrintOptions, previe
   const frameArtwork = options.paper.assetId && !options.branding && !options.date
     ? await loadFrame(`/frames/${options.paper.assetId}/${s.id}-${frameMode}.png`)
     : null;
-  const photoWindows = frameArtwork
-    ? options.paper.assetId === "35mm-film" ? findTransparentWindows(frameArtwork, s.count) : findPhotoWindows(frameArtwork, s.count)
-    : [];
+  // Use alpha-connected openings for every PNG frame. The earlier 35mm-only
+  // row scanner could choose slightly different bounds when a browser decoded
+  // antialiased alpha edges differently, which showed up as thin unfilled
+  // bands on some camera/device combinations.
+  const photoWindows = frameArtwork ? findPhotoWindows(frameArtwork, s.count) : [];
   if (frameArtwork && photoWindows.length !== s.count) {
     throw new Error(`Could not line up the ${options.paper.assetId ?? "photo"} windows for this layout.`);
   }
