@@ -133,11 +133,11 @@ function decorate(ctx: CanvasRenderingContext2D, o: PrintOptions, g: ReturnType<
 }
 
 function decorateTheme(ctx: CanvasRenderingContext2D, options: PrintOptions, geometry: ReturnType<typeof printGeometry>) {
-  if (options.paper.assetId !== "baby-pink-hearts" || options.format.cols !== 1) return;
+  if (options.paper.assetId !== "baby-pink-hearts") return;
   const { format } = options;
-  const size = Math.max(24, geometry.unit * .03);
+  const size = Math.max(24, geometry.unit * .034);
   const sideX = Math.max(size * .72, geometry.x * .48);
-  const drawHeart = (x: number, y: number, scale: number, rotation: number, color: string) => {
+  const drawHeart = (x: number, y: number, scale: number, rotation: number, color = "#b84760") => {
     ctx.save();
     ctx.translate(x, y);
     ctx.rotate(rotation);
@@ -151,12 +151,61 @@ function decorateTheme(ctx: CanvasRenderingContext2D, options: PrintOptions, geo
     ctx.closePath();
     ctx.fillStyle = color;
     ctx.fill();
+    ctx.strokeStyle = "#8f304b";
+    ctx.lineWidth = Math.max(1.5, geometry.unit * .0015);
+    ctx.stroke();
     ctx.restore();
   };
+  const drawBow = (x: number, y: number, scale: number, rotation: number) => {
+    ctx.save(); ctx.translate(x, y); ctx.rotate(rotation); ctx.scale(scale / 40, scale / 40);
+    ctx.strokeStyle = "#a83e58"; ctx.fillStyle = "#f19a9b"; ctx.lineWidth = 2.4; ctx.lineCap = "round"; ctx.lineJoin = "round";
+    ctx.beginPath(); ctx.moveTo(-2, 0); ctx.quadraticCurveTo(-24, -23, -19, -4); ctx.quadraticCurveTo(-16, 8, -2, 1); ctx.closePath(); ctx.fill(); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(2, 0); ctx.quadraticCurveTo(24, -23, 19, -4); ctx.quadraticCurveTo(16, 8, 2, 1); ctx.closePath(); ctx.fill(); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(-2, 3); ctx.quadraticCurveTo(-7, 20, -13, 22); ctx.moveTo(2, 3); ctx.quadraticCurveTo(8, 17, 14, 20); ctx.stroke();
+    ctx.beginPath(); ctx.ellipse(0, 0, 4, 5, 0, 0, Math.PI * 2); ctx.fillStyle = "#f7c9d2"; ctx.fill(); ctx.stroke();
+    ctx.restore();
+  };
+  const drawSparkle = (x: number, y: number, scale: number, color: string) => {
+    ctx.save(); ctx.translate(x, y); ctx.strokeStyle = color; ctx.fillStyle = "#f8a2a0"; ctx.lineWidth = Math.max(1.5, geometry.unit * .0014); ctx.lineCap = "round";
+    ctx.beginPath(); ctx.moveTo(0, -scale); ctx.quadraticCurveTo(scale * .13, -scale * .12, scale, 0); ctx.quadraticCurveTo(scale * .12, scale * .12, 0, scale); ctx.quadraticCurveTo(-scale * .12, scale * .12, -scale, 0); ctx.quadraticCurveTo(-scale * .12, -scale * .12, 0, -scale); ctx.fill(); ctx.stroke();
+    ctx.beginPath(); ctx.arc(-scale * 1.35, scale * .8, scale * .11, 0, Math.PI * 2); ctx.arc(scale * 1.25, -scale * .95, scale * .09, 0, Math.PI * 2); ctx.fill(); ctx.restore();
+  };
+  const drawStamp = (x: number, y: number, scale: number) => {
+    ctx.save(); ctx.translate(x, y); ctx.rotate(-.12); ctx.strokeStyle = "#9f3d55"; ctx.fillStyle = "#f7d6d8"; ctx.lineWidth = Math.max(1.5, geometry.unit * .0015);
+    const edge = scale * .78; ctx.fillRect(-edge / 2, -edge / 2, edge, edge); ctx.strokeRect(-edge / 2, -edge / 2, edge, edge);
+    ctx.setLineDash([scale * .08, scale * .07]); ctx.strokeRect(-edge * .38, -edge * .38, edge * .76, edge * .76); ctx.setLineDash([]);
+    ctx.restore(); drawHeart(x, y + scale * .02, scale * .28, 0, "#bb4b61");
+  };
+  const drawFlower = (x: number, y: number, scale: number) => {
+    ctx.save(); ctx.translate(x, y); ctx.fillStyle = "#ed8e92"; ctx.strokeStyle = "#9f3d55"; ctx.lineWidth = Math.max(1.3, geometry.unit * .0012);
+    for (let petal = 0; petal < 5; petal++) { ctx.save(); ctx.rotate(petal * Math.PI * 2 / 5); ctx.beginPath(); ctx.ellipse(0, -scale * .42, scale * .22, scale * .34, 0, 0, Math.PI * 2); ctx.fill(); ctx.stroke(); ctx.restore(); }
+    ctx.beginPath(); ctx.arc(0, 0, scale * .17, 0, Math.PI * 2); ctx.fillStyle = "#f8d58a"; ctx.fill(); ctx.stroke(); ctx.restore();
+  };
   for (let row = 0; row < format.rows; row++) {
-    const centerY = geometry.y + row * (geometry.cell + geometry.gap) + geometry.cell * .5;
-    drawHeart(sideX, centerY, size, -.12, "#ad405d");
-    drawHeart(format.w - sideX, centerY, size * .82, .11, "#cc6577");
+    const top = geometry.y + row * (geometry.cell + geometry.gap);
+    drawFlower(sideX, top + geometry.cell * .16, size * .76);
+    drawHeart(sideX, top + geometry.cell * .49, size, -.12);
+    drawBow(sideX, top + geometry.cell * .81, size * 1.12, -.08);
+    drawHeart(format.w - sideX, top + geometry.cell * .18, size * .75, .1, "#cc6577");
+    drawBow(format.w - sideX, top + geometry.cell * .52, size * 1.05, .08);
+    drawStamp(format.w - sideX, top + geometry.cell * .84, size * .85);
+    drawSparkle(sideX * 1.75, top + geometry.cell * .34, size * .25, "#ae4c63");
+    drawSparkle(format.w - sideX * 1.8, top + geometry.cell * .7, size * .22, "#ad4d61");
+    for (let column = 0; column < format.cols - 1; column++) {
+      const gutterX = geometry.x + column * (geometry.cell + geometry.gap) + geometry.cell + geometry.gap * .5;
+      const miniSize = Math.min(size * .48, geometry.gap * .52);
+      drawHeart(gutterX, top + geometry.cell * .5, miniSize, column % 2 ? .1 : -.1, column % 2 ? "#cc6577" : "#b84760");
+      drawSparkle(gutterX, top + geometry.cell * .24, miniSize * .36, "#ad4d61");
+      drawSparkle(gutterX, top + geometry.cell * .76, miniSize * .33, "#ae4c63");
+    }
+    if (row < format.rows - 1) {
+      const gutterY = top + geometry.cell + geometry.gap * .5;
+      const miniSize = Math.min(size * .42, geometry.gap * .4);
+      for (let column = 0; column < format.cols; column++) {
+        const centerX = geometry.x + column * (geometry.cell + geometry.gap) + geometry.cell * .5;
+        drawSparkle(centerX, gutterY, miniSize * .34, "#ad4d61");
+      }
+    }
   }
 }
 
