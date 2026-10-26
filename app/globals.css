@@ -95,3 +95,21 @@ header{border-width:0 0 1px}footer{border-width:1px 0 0}
 .theme-swatch-art{display:block;width:45px;height:68px;overflow:visible;filter:drop-shadow(1px 2px 1px #50445a2b)}
 @media(max-width:760px){.format-list.theme-list{grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;max-height:234px;padding:3px 2px}.theme-list .format-option-swatch{min-height:72px;height:72px;padding:3px}.theme-swatch-art{width:41px;height:61px}}
 @media(max-width:380px){.format-list.theme-list{gap:2px}.theme-list .format-option-swatch{height:66px;min-height:66px}.theme-swatch-art{width:37px;height:56px}}
+
+/* Capture choices sit on the booth wall as a small illustrated control plate. */
+.wall-capture{position:absolute;left:18%;top:42%;width:20%;z-index:4;margin:0;min-width:0;padding:13px 12px 11px;background:transparent url('/art/sketch-panel.png') center/100% 100% no-repeat}
+.wall-capture legend{float:left;width:100%;margin:0 0 7px;padding:0 3px;font:21px/1.1 var(--hand);color:#5e6e88}
+.wall-capture-options{clear:both;display:grid;gap:4px}
+.wall-capture-options>button{display:flex;align-items:center;gap:8px;width:100%;min-height:39px;padding:5px 8px;text-align:left;color:#687b99;font:15px/1.1 var(--hand);background:transparent url('/art/sketch-button.png') center/100% 100% no-repeat;border:0;border-radius:0;box-shadow:none;cursor:pointer;transform:rotate(-.5deg)}
+.wall-capture-options>button:nth-child(even){transform:rotate(.5deg)}
+.wall-capture-options>button>span:first-child{display:grid;place-items:center;flex:none;width:23px;height:23px;color:#687b99;font:18px var(--hand);background:#dcd3eea6;clip-path:polygon(4% 2%,96% 0,100% 94%,1% 100%)}
+.wall-capture-options>button>span:last-child{display:grid;gap:2px;min-width:0}
+.wall-capture-options strong{font-weight:500;white-space:nowrap}
+.wall-capture-options small{font:11px var(--hand);color:#8897ad;white-space:nowrap}
+.wall-capture-options>button.selected{filter:contrast(1.12) saturate(1.2)}
+.wall-capture-options>button.selected:after{content:'✓';font:13px var(--hand);margin-left:auto;color:#657c9b}
+.wall-capture-options>button:hover{transform:translateY(-1px) rotate(-.5deg)}
+.capture-file-input{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.manual-capture-button,.upload-capture-button{min-width:260px}
+@media(max-width:760px){.wall-capture{left:12%;top:56%;width:35%;padding:10px 8px 8px}.wall-capture legend{font-size:18px;margin-bottom:4px}.wall-capture-options{gap:2px}.wall-capture-options>button{min-height:30px;padding:3px 5px;gap:5px;font-size:13px}.wall-capture-options>button>span:first-child{width:18px;height:18px;font-size:14px}.wall-capture-options small{display:none}.capture-controls>.primary{min-width:0}}
+@media(max-width:380px){.wall-capture{left:10%;width:38%;top:56.5%;padding:9px 6px 7px}.wall-capture legend{font-size:16px}.wall-capture-options>button{min-height:28px;gap:4px;padding:2px 4px;font-size:12px}.wall-capture-options>button>span:first-child{width:16px;height:16px;font-size:12px}}
