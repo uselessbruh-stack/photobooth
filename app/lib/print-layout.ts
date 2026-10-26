@@ -53,6 +53,50 @@ function loadFrame(src: string) {
 }
 
 type PhotoWindow = { x: number; y: number; width: number; height: number };
+function findPhotoWindows(artwork: HTMLImageElement, expected: number): PhotoWindow[] {
+  const factor = Math.min(1, 900 / Math.max(artwork.naturalWidth, artwork.naturalHeight));
+  const canvas = document.createElement("canvas");
+  canvas.width = Math.max(1, Math.round(artwork.naturalWidth * factor));
+  canvas.height = Math.max(1, Math.round(artwork.naturalHeight * factor));
+  const ctx = canvas.getContext("2d", { willReadFrequently: true });
+  if (!ctx) return [];
+  ctx.drawImage(artwork, 0, 0, canvas.width, canvas.height);
+  const alpha = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+  const total = canvas.width * canvas.height;
+  const visited = new Uint8Array(total);
+  const queue = new Int32Array(total);
+  const minSide = Math.min(canvas.width, canvas.height);
+  const minDimension = minSide * .1;
+  const minArea = total * .005;
+  const components: Array<{ minX: number; minY: number; maxX: number; maxY: number; area: number }> = [];
+  for (let index = 0; index < total; index++) {
+    if (visited[index] || alpha[index * 4 + 3] >= 16) continue;
+    let head = 0, tail = 0, minX = canvas.width, minY = canvas.height, maxX = 0, maxY = 0;
+    queue[tail++] = index; visited[index] = 1;
+    while (head < tail) {
+      const current = queue[head++], x = current % canvas.width, y = Math.floor(current / canvas.width);
+      if (x < minX) minX = x; if (x > maxX) maxX = x;
+      if (y < minY) minY = y; if (y > maxY) maxY = y;
+      let next = current - 1;
+      if (x > 0 && !visited[next] && alpha[next * 4 + 3] < 16) { visited[next] = 1; queue[tail++] = next; }
+      next = current + 1;
+      if (x + 1 < canvas.width && !visited[next] && alpha[next * 4 + 3] < 16) { visited[next] = 1; queue[tail++] = next; }
+      next = current - canvas.width;
+      if (y > 0 && !visited[next] && alpha[next * 4 + 3] < 16) { visited[next] = 1; queue[tail++] = next; }
+      next = current + canvas.width;
+      if (y + 1 < canvas.height && !visited[next] && alpha[next * 4 + 3] < 16) { visited[next] = 1; queue[tail++] = next; }
+    }
+    const width = maxX - minX + 1, height = maxY - minY + 1;
+    if (tail >= minArea && width >= minDimension && height >= minDimension) components.push({ minX, minY, maxX, maxY, area: tail });
+  }
+  const scaleX = artwork.naturalWidth / canvas.width, scaleY = artwork.naturalHeight / canvas.height;
+  return components
+    .sort((a, b) => b.area - a.area)
+    .slice(0, expected)
+    .map(({ minX, minY, maxX, maxY }) => ({ x: minX * scaleX, y: minY * scaleY, width: (maxX - minX + 1) * scaleX, height: (maxY - minY + 1) * scaleY }))
+    .sort((a, b) => a.y - b.y || a.x - b.x);
+}
+
 function findTransparentWindows(artwork: HTMLImageElement, expected: number): PhotoWindow[] {
   const canvas = document.createElement("canvas");
   canvas.width = artwork.naturalWidth; canvas.height = artwork.naturalHeight;
@@ -275,11 +319,11 @@ export async function renderPrint(items: string[], options: PrintOptions, previe
   const frameArtwork = options.paper.assetId && !options.branding && !options.date
     ? await loadFrame(`/frames/${options.paper.assetId}/${s.id}-${frameMode}.png`)
     : null;
-  const filmWindows = options.paper.assetId === "35mm-film" && frameArtwork
-    ? findTransparentWindows(frameArtwork, s.count)
+  const photoWindows = frameArtwork
+    ? options.paper.assetId === "35mm-film" ? findTransparentWindows(frameArtwork, s.count) : findPhotoWindows(frameArtwork, s.count)
     : [];
-  if (options.paper.assetId === "35mm-film" && frameArtwork && filmWindows.length !== s.count) {
-    throw new Error("Could not line up the 35mm photo windows for this layout.");
+  if (frameArtwork && photoWindows.length !== s.count) {
+    throw new Error(`Could not line up the ${options.paper.assetId ?? "photo"} windows for this layout.`);
   }
   ctx.scale(scale, scale);
   if (!options.paper.transparentPerforations || !frameArtwork) {
@@ -287,7 +331,7 @@ export async function renderPrint(items: string[], options: PrintOptions, previe
   }
   for (let i = 0; i < s.count; i++) {
     const img = new Image(); img.src = items[i]; await img.decode();
-    const filmWindow = filmWindows[i];
+    const filmWindow = photoWindows[i];
     const x = g.x + (i % s.cols) * (g.cell + g.gap), y = g.y + Math.floor(i / s.cols) * (g.cell + g.gap);
     if (filmWindow) drawPhotoInWindow(ctx, img, filmWindow);
     else {
